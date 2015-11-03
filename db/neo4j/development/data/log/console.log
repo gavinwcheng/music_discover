@@ -1,0 +1,22 @@
+2015-11-03 10:50:34.069+0000 INFO  [API] Setting startup timeout to: 120000ms based on 120000
+2015-11-03 10:50:35.668+0000 INFO  [API] Successfully started database
+2015-11-03 10:50:35.719+0000 INFO  [API] Starting HTTP on port :7474 with 4 threads available
+2015-11-03 10:50:35.885+0000 INFO  [API] Enabling HTTPS on port :7473
+2015-11-03 10:50:35.886+0000 INFO  [API] No SSL certificate found, generating a self-signed certificate..
+10:50:36.220 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @3121ms
+2015-11-03 10:50:36.266+0000 INFO  [API] Mounting static content at [/webadmin] from [webadmin-html]
+2015-11-03 10:50:36.319+0000 INFO  [API] Mounting static content at [/browser] from [browser]
+10:50:36.323 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.4.v20141103
+10:50:36.343 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.h.MovedContextHandler@70817e26{/,null,AVAILABLE}
+10:50:36.441 [main] INFO  o.e.j.w.StandardDescriptorProcessor - NO JSP Support for /webadmin, did not find org.apache.jasper.servlet.JspServlet
+10:50:36.452 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.w.WebAppContext@74f0be97{/webadmin,jar:file:/Users/Sophie/Desktop/programming/music_discover/db/neo4j/development/system/lib/neo4j-server-2.2.5-static-web.jar!/webadmin-html,AVAILABLE}
+10:50:36.914 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@1e611df3{/db/manage,null,AVAILABLE}
+10:50:37.172 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@6a4cf663{/db/data,null,AVAILABLE}
+10:50:37.191 [main] INFO  o.e.j.w.StandardDescriptorProcessor - NO JSP Support for /browser, did not find org.apache.jasper.servlet.JspServlet
+10:50:37.192 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.w.WebAppContext@3f2d46ad{/browser,jar:file:/Users/Sophie/Desktop/programming/music_discover/db/neo4j/development/system/lib/neo4j-browser-2.2.5.jar!/browser,AVAILABLE}
+10:50:37.314 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@88a9b66{/,null,AVAILABLE}
+10:50:37.324 [main] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@754db67e{HTTP/1.1}{localhost:7474}
+10:50:37.722 [main] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@55d678b6{SSL-HTTP/1.1}{localhost:7473}
+10:50:37.723 [main] INFO  org.eclipse.jetty.server.Server - Started @4629ms
+2015-11-03 10:50:37.723+0000 INFO  [API] Server started on: http://localhost:7474/
+2015-11-03 10:50:37.723+0000 INFO  [API] Remote interface ready and available at [http://localhost:7474/]
