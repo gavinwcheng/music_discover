@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'users/index' => 'users#index'
+  get 'users/index'    => 'users#index'
+  get 'users/playlist' => 'users#show_playlist'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
