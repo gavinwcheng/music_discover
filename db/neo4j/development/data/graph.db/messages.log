@@ -343,3 +343,10 @@ Storage files: (filename : modification date - size)
 2015-11-03 10:59:40.601+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob]: Index population completed. Index is now online: [:User(uuid) [provider: {key=lucene, version=1.0}]]
 2015-11-03 10:59:40.622+0000 INFO  [o.n.k.i.a.KernelSchemaStateStore]: Schema state store has been cleared.
 2015-11-03 10:59:40.758+0000 DEBUG [o.n.k.i.q.QueryExecutionEngine]: MATCH (n:`User`) RETURN n
+2015-11-03 11:45:22.135+0000 DEBUG [o.n.k.i.q.QueryExecutionEngine]: CREATE CONSTRAINT ON (n:`Artist`) ASSERT n.`uuid` IS UNIQUE
+2015-11-03 11:45:22.159+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob]: Index population started: [:Artist(uuid) [provider: {key=lucene, version=1.0}]]
+2015-11-03 11:45:22.162+0000 INFO  [o.n.k.i.a.KernelSchemaStateStore]: Schema state store has been cleared.
+2015-11-03 11:45:22.163+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob]: Index population completed. Index is now online: [:Artist(uuid) [provider: {key=lucene, version=1.0}]]
+2015-11-03 11:45:22.164+0000 INFO  [o.n.k.i.a.KernelSchemaStateStore]: Schema state store has been cleared.
+2015-11-03 11:45:22.187+0000 DEBUG [o.n.k.i.q.QueryExecutionEngine]: MATCH (n:`Artist`) RETURN n
+2015-11-03 11:49:31.452+0000 DEBUG [o.n.k.i.q.QueryExecutionEngine]: MATCH (n:`User`) RETURN n
