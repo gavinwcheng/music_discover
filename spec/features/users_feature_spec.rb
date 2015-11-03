@@ -6,7 +6,8 @@ feature 'creating a playlist' do
     # OmniAuth.config.mock_auth[:spotify] = nil
     OmniAuth.config.mock_auth[:spotify] = OmniAuth::AuthHash.new({
       :provider => 'spotify',
-      :id => 'testing'
+      :id => 'testing',
+      :email => 'testing@testing.com'
     })
     Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:spotify]
   end
@@ -18,6 +19,7 @@ feature 'creating a playlist' do
       click_link 'Sign in with Spotify'
       expect(page).to have_content "Welcome #{user.username}"
       expect(page).to have_link 'Generate playlist'
+      expect(current_path).to eq '/users/match'
     end
   end
 
@@ -26,7 +28,7 @@ feature 'creating a playlist' do
       user = User.create(username: 'testing')
       user2 = User.create(username: 'testing2')
       visit '/users/index'
-      click_link 'Sign in with Spotify'      
+      click_link 'Sign in with Spotify'
       click_link 'Generate playlist'
       expect(page).to have_content user2.username
       expect(page).to have_content user2.artists
