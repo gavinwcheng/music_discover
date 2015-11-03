@@ -8,14 +8,14 @@ feature 'creating a playlist' do
     end
   end
 
-  context 'clicking "Generate playlist" link on index page' do
-    scenario 'displays playlist recommendations' do
-      user2 = User.create(username: 'michael')
-      visit '/users/index'
-      click_link 'Generate playlist'
-      expect(page).to have_content user2.username
-      expect(page).to have_content 'Thriller'
-      expect(current_path).to eq '/users/playlist'
-    end
-  end
+  # context 'clicking "Generate playlist" link on index page' do
+  #   scenario 'displays playlist recommendations' do
+  #     user2 = User.create(username: 'michael')
+  #     visit '/users/index'
+  #     click_link 'Generate playlist'
+  #     expect(page).to have_content user2.username
+  #     expect(page).to have_content 'Thriller'
+  #     expect(current_path).to eq '/users/playlist'
+  #   end
+  # end
 end
