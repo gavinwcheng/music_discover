@@ -1,13 +1,13 @@
 class UsersController < ApplicationController
   include UsersHelper
-  
+
   def index
   end
 
   def spotify
     session[:current_user] = RSpotify::User.new(request.env['omniauth.auth'])
-    User.merge(username: session[:current_user].id, email: session[:current_user].email)
-    save_artists session[:current_user]
+    current_user = User.merge(username: session[:current_user].id, email: session[:current_user].email)
+    save_artists session[:current_user], current_user
     redirect_to '/users/match'
   end
 
