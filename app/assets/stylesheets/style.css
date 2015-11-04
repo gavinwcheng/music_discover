@@ -5,32 +5,57 @@
   margin-right: -50%;
   transform: translate(-50%, -50%);
   text-align: center;
-/*  border: solid orange;
-*/}
+  }
 
-#sign_in_box {
+.button_box {
   width: 320px;
   height: 42px;
   background-color: #2EBD59;
   border-radius: 20px;
-  line-height: 41px;
-  margin-left: 18.5%;
   text-align: center;
-/*  border: solid black;
-*/  margin-top: 5%;
+  line-height: 41px;
+  font-size: 20px;
+}
+
+.button_box:hover {
+  background-color: #4fd477;
+}
+
+#sign_in_box {
+  margin-left: 18.5%;  
+  margin-top: 5%;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link:hover {
+  background-color: #4fd477;
 }
 
 #sign_in {
   color: #ffffff;
-  text-decoration: none;
-  font-size: 20px;
 }
 
-#sign_in:hover {
-  background-color: #2EBD59;
+#generate {
+  color: #ffffff;
 }
 
 #index_logo {
   width: 60%;
   height: 60%;
+}
+
+#welcome_logo {
+  width: 10%;
+  height: 10%;
+  float: left;
+  padding: 20px;
+}
+
+#welcome_box {
+  float: right;
+  padding: 40px;
+  font-size: 180%;
 }

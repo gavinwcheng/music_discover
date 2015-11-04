@@ -1,3 +1,9 @@
-Welcome <%= @user["id"] %>
+<img src="/images/cropped_grape_logo.png" id="welcome_logo">
 
-<%= link_to 'Generate playlist', '/users/playlist' %>
+<div id="welcome_box">
+  Welcome <%= @user["id"] %>
+</div>
+
+<div class="central button_box">
+  <%= link_to 'Generate playlist', '/users/playlist', class:"link", id:"generate"%>
+</div>
