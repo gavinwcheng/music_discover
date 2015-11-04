@@ -1,0 +1,36 @@
+.central {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+/*  border: solid orange;
+*/}
+
+#sign_in_box {
+  width: 320px;
+  height: 42px;
+  background-color: #2EBD59;
+  border-radius: 20px;
+  line-height: 41px;
+  margin-left: 18.5%;
+  text-align: center;
+/*  border: solid black;
+*/  margin-top: 5%;
+}
+
+#sign_in {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+#sign_in:hover {
+  background-color: #2EBD59;
+}
+
+#index_logo {
+  width: 60%;
+  height: 60%;
+}

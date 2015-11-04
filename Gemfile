@@ -49,5 +49,6 @@ group :development do
   gem 'spring'
 end
 
-
 gem 'neo4j', '~> 5.2.7'
+# gem 'neo4j', '~> 5.2', '>= 5.2.13', '>= 5.2.14'
+# cd .
