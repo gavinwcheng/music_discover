@@ -23,7 +23,7 @@ feature 'creating a playlist' do
     end
   end
 
-  context 'on match page' do
+  xcontext 'on match page' do
     scenario 'displays playlist recommendations' do
       user = User.create(username: 'testing')
       user2 = User.create(username: 'testing2')
