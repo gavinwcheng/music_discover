@@ -4,10 +4,10 @@
   Welcome, <%= @user["display_name"].split(" ").first %>
 </div>
 
-<div id="intro_text">
-  Click below to
-</div>
 
 <div class="central button_box">
+  <div id="intro_text">
+    Click below to
+  </div>
   <%= link_to 'generate a playlist', '/users/playlist', class:"link", id:"generate"%>
 </div>
