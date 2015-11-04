@@ -23,15 +23,15 @@ feature 'creating a playlist' do
     end
   end
 
-  xcontext 'on match page' do
-    scenario 'displays playlist recommendations' do
+  context 'on match page' do
+    xscenario 'displays playlist recommendations' do
       user = User.create(username: 'testing')
       user2 = User.create(username: 'testing2')
       visit '/users/index'
       click_link 'Sign in with Spotify'
       click_link 'Generate playlist'
       expect(page).to have_content user2.username
-      expect(page).to have_content user2.artists
+      expect(page).to have_content user2.artists.to_a
       expect(current_path).to eq '/users/playlist'
     end
   end
