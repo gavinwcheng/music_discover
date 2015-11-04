@@ -1,0 +1,77 @@
+body {
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  /*font-family: Verdana, Geneva, sans-serif;*/
+}
+
+.central {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  }
+
+.button_box {
+  width: 320px;
+  height: 42px;
+  background-color: #2EBD59;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 41px;
+  font-size: 20px;
+}
+
+.button_box:hover {
+  background-color: #4fd477;
+}
+
+#sign_in_box {
+  margin-left: 18.5%;  
+  margin-top: 5%;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link:hover {
+  background-color: #4fd477;
+}
+
+#sign_in {
+  color: #ffffff;
+}
+
+#generate {
+  color: #ffffff;
+}
+
+#index_logo {
+  width: 60%;
+  height: 60%;
+}
+
+#welcome_logo {
+  width: 10%;
+  height: 10%;
+  float: left;
+  padding: 20px;
+}
+
+#welcome_box {
+  float: right;
+  padding: 40px;
+  font-size: 200%;
+}
+
+#intro_text {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  margin-right: -50%;
+  top: 43%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 300%
+}
