@@ -75,3 +75,57 @@ body {
   text-align: center;
   font-size: 300%
 }
+
+.grape_fill {
+  position: absolute;
+  background-color: #8944CA;
+  opacity: 0;
+  /*background-color: blue;*/
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+.grape_fill:hover {
+  opacity: 1;
+}
+
+#grape_0 {
+  margin-left: 298px;
+  margin-top: 210px;
+}
+
+#grape_1 {
+  margin-left: 243px;
+  margin-top: 194px;
+}
+
+#grape_2 {
+  margin-left: 294px;
+  margin-top: 155px;
+}
+
+#grape_3 {
+  margin-left: 197px;
+  margin-top: 170px;
+}
+
+#grape_4 {
+  margin-left: 243px;
+  margin-top: 137px;
+}
+
+#grape_5 {
+  margin-left: 291px;
+  margin-top: 103px;
+}
+
+#grape_6 {
+  margin-left: 190px;
+  margin-top: 119px;
+}
+
+#grape_7 {
+  margin-left: 241px;
+  margin-top: 81px;
+}
