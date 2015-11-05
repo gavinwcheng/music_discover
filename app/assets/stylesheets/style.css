@@ -32,11 +32,13 @@ body {
 }
 
 .link {
+  display: block;
   text-decoration: none;
 }
 
 .link:hover {
   background-color: #4fd477;
+  border-radius: 20px;
 }
 
 #sign_in {
