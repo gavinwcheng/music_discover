@@ -23,7 +23,7 @@ body {
 }
 
 #table {
-  max-width: 100%;
+  width: 100%;
 }
 
 #sign_in_box {
