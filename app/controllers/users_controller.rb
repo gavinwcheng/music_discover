@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   include UsersHelper
 
   def index
+    # @song_preview = RSpotify::Track.preview_url('How Deep Is Your Love')
   end
 
   def spotify
