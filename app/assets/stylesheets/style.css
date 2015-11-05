@@ -22,8 +22,12 @@ body {
   font-size: 20px;
 }
 
-#table {
-  width: 100%;
+.tablerow {
+  height: 10px;
+}
+
+.songlink {
+    background-color: #2EBD59;
 }
 
 #sign_in_box {
