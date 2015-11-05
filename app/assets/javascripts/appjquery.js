@@ -19,7 +19,19 @@ $(document).ready(function() {
     opacity:0
   }, 500);
 
-  $('.button_box').delay(2500).animate({
+  $('#sign_in_box').delay(2500).animate({
+    opacity:1
+  }, 500);
+
+  $('#generate_playlist_box').delay(500).animate({
+    opacity:1
+  }, 500);
+
+  $('#welcome_logo').delay(500).animate({
+    opacity:1
+  }, 500);
+
+  $('#welcome_box').delay(500).animate({
     opacity:1
   }, 500);
 
