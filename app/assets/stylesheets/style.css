@@ -23,10 +23,6 @@ body {
   font-size: 20px;
 }
 
-.button_box:hover {
-  background-color: #4fd477;
-}
-
 #sign_in_box {
   margin-left: 18.5%;
   margin-top: 5%;
@@ -38,6 +34,11 @@ body {
 }
 
 .link:hover {
+  background-color: #4fd477;
+  border-radius: 20px;
+}
+
+#generate:hover {
   background-color: #4fd477;
   border-radius: 20px;
 }
