@@ -19,7 +19,7 @@
   <img src="/images/cropped_grape_logo.png" id="index_logo">
     <div class="button_box" id="sign_in_box">
       <% if @user %>
-        <%= link_to 'Generate a playlist', '/users/playlist', class:"link", id:"generate"%>
+        <%= link_to 'Generate a playlist', '/artists/playlist', class:"link", id:"generate"%>
         <div class="button_divide"></div>
         <%= link_to 'Sign out', '/users/signout', class:"button_box link", id:"sign_out_index", method: :get%>
       <% else %>

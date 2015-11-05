@@ -20,13 +20,13 @@ feature 'creating a playlist' do
   end
 
   context 'on index page' do
-    xscenario 'displays a link to create playlist' do
+    scenario 'displays a link to create playlist' do
       user = User.create(username: 'testing')
-      visit '/users/index'
+      visit '/'
       click_link 'Sign in to Grape with Spotify'
       expect(page).to have_content "Welcome #{user.username}"
       expect(page).to have_link 'Generate playlist'
-      expect(current_path).to eq '/users/match'
+      expect(current_path).to eq '/artists/match'
     end
   end
 
@@ -37,12 +37,12 @@ feature 'creating a playlist' do
       user3 = User.create(username: 'testing3')
       artist = Artist.create(name: 'test_artist')
       user2.artists << artist
-      visit '/users/index'
+      visit '/'
       click_link 'Sign in to Grape with Spotify'
       click_link 'Generate playlist'
       expect(page).to have_content 'testing2'
       expect(page).to have_content 'test_artist'
-      expect(current_path).to eq '/users/playlist'
+      expect(current_path).to eq '/artists/playlist'
     end
   end
 end
