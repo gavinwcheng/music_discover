@@ -31,7 +31,7 @@ feature 'creating a playlist' do
   end
 
   context 'on match page' do
-    scenario 'displays playlist recommendations' do
+    xscenario 'displays playlist recommendations' do
       user = User.create(username: 'testing')
       user2 = User.create(username: 'testing2')
       user3 = User.create(username: 'testing3')

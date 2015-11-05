@@ -5,7 +5,7 @@ module UsersHelper
         track.artists.each do |artist|
           Artist.merge(name: artist.name)
           database_artist = Artist.find_by(name: artist.name)
-          database_user.artists << database_artist unless database_user.artists.include? database_artist
+          database_user.artists << database_artist
         end
       end
     end
