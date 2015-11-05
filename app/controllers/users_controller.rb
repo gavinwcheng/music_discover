@@ -12,6 +12,11 @@ class UsersController < ApplicationController
     redirect_to '/users/match'
   end
 
+  def destroy
+    session[:current_user] = nil
+    redirect_to root_url
+  end
+
   def match
     @user = session[:current_user]
   end
