@@ -23,6 +23,8 @@ class UsersController < ApplicationController
     #
     #   end
     # end
-    @user = User.find_by(username: 'testing2')
+    @user = session[:current_user]
+    @track1 = RSpotify::Track.find('2vX5WL7s6UdeQyweZEx7PP')
+    @track2 = RSpotify::Track.find('22mek4IiqubGD9ctzxc69s')
   end
 end
