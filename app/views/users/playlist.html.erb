@@ -1,0 +1,15 @@
+<% @recommended_spotify_users.each do |user| %>
+  <% if user.images.first %>
+    <%= image_tag(user.images.first['url']) %>
+  <% end %>
+  <%= user.id %><br/><br/>
+  <% @favourite_spotify_artists[user.id].each do |artist| %>
+  <% if artist %>
+    <% if artist.images.first %>
+      <%= image_tag(artist.images.first['url'], height: '32', width: '32') %>
+    <% end %>
+    <em><%= artist.name %></em>-----
+    <%= artist.albums.first.tracks.first.name %><br/>
+  <% end %>
+  <% end %><br/><br/>
+<% end %>

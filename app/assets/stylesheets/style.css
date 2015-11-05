@@ -22,12 +22,20 @@ body {
   font-size: 20px;
 }
 
+
 .tablerow {
   height: 10px;
 }
 
 .songlink {
     background-color: #2EBD59;
+
+#sign_out_index {
+  color: #fff;
+}
+
+#table {
+  max-width: 100%;
 }
 
 #sign_in_box {
@@ -63,6 +71,11 @@ body {
 #generate {
   color: #ffffff;
   text-decoration: none;
+}
+
+.button_divide {
+  height: 10px;
+  width: 340px;
 }
 
 #index_logo {
