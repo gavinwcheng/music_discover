@@ -1,3 +1,4 @@
+<%= @user %>
 <div class="central" id="logo_box">
   <div class="leaf_fill"></div>
   <div class="grape_fill" id="grape_0"></div>
@@ -10,6 +11,10 @@
   <div class="grape_fill" id="grape_7"></div>
   <img src="/images/cropped_grape_logo.png" id="index_logo">
     <div class="button_box" id="sign_in_box">
-      <%= link_to 'Sign in to Grape with Spotify', '/auth/spotify', class:"link", id:"sign_in"%>
+      <% if @user["credentials"] %>
+        <%= link_to 'Generate a playlist', '/users/playlist', class:"link", id:"generate"%>
+      <% else %>
+        <%= link_to 'Sign in to Grape with Spotify', '/auth/spotify', class:"link", id:"sign_in"%>
+      <% end %>
     </div>
 </div>

@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   include UsersHelper
 
   def index
+    @user = session[:current_user]
   end
 
   def spotify
