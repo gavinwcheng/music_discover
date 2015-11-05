@@ -66,6 +66,11 @@ body {
   height: 10%;
   float: left;
   padding: 20px;
+  border-radius: 50%;
+}
+
+#welcome_logo:hover {
+  background-color: #fff;
 }
 
 #welcome_box {
