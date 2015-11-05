@@ -1,7 +1,9 @@
 <img src="/images/cropped_grape_logo.png" id="welcome_logo">
 
 <div id="welcome_box">
-  Welcome, <%= @user["display_name"].split(" ").first %>
+  Welcome,
+  <% name = @user["display_name"].split(" ").first %>
+  <%= link_to name, 'http://open.spotify.com/user/' + @user["id"], :target => "_blank" %>
 </div>
 
 
