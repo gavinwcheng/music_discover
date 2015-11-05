@@ -3,7 +3,7 @@
 <div id="welcome_box">
   Welcome,
   <% name = @user["display_name"].split(" ").first %>
-  <%= link_to name, 'http://open.spotify.com/user/' + @user["id"], :target => "_blank" %>
+  <%= link_to name, 'http://open.spotify.com/user/' + @user["id"], id:"name_link", :target => "_blank" %>
 </div>
 
 

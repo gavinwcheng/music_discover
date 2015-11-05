@@ -80,9 +80,19 @@ body {
   width: 100%;
 }
 
+#name_link {
+  color: black;
+  text-decoration: none;
+}
+
+#name_link:hover {
+  color: #434343;
+  background-color: #ffffff;
+}
+
 .leaf_fill {
   position: absolute;
-  background-color: #8944CA; 
+  background-color: #8944CA;
   opacity: 1;
   border-radius: 50%;
   width: 80px;
