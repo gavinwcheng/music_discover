@@ -3,7 +3,7 @@
     <%= image_tag(user.images.first['url']) %>
   <% end %>
   <%= user.id %><br/><br/>
-  <% @favourite_spotify_artists[user.id].each do |artist| %>
+  <% @recommended_spotify_artists[user.id].each do |artist| %>
   <% if artist %>
     <% if artist.images.first %>
       <%= image_tag(artist.images.first['url'], height: '32', width: '32') %>
