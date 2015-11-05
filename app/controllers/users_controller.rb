@@ -28,7 +28,7 @@ class UsersController < ApplicationController
     @recommended_users.each do |user|
       i = 0
       @recommended_spotify_users << RSpotify::User.find(user[0].username)
-      @favourite_artists[user[0].username] = user[0].artists(:a).order('count(*) DESC').limit(50).pluck('a', 'count(*)')
+      @favourite_artists[user[0].username] = user[0].artists(:a).order('a.popularity DESC').limit(30).pluck('a', 'count(*)')
       @favourite_artists[user[0].username].each do |artist|
         unless (@common_artists.include? artist) || (i >= 20)
           spotify_artists << RSpotify::Artist.search(artist[0].name).first if artist[0].name != ""
