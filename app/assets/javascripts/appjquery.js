@@ -11,15 +11,15 @@ $(document).ready(function() {
   $('.grape_fill').each(function() {
     $(this).delay(delay).animate({
       opacity:0
-    }, 200);
-    delay += 300;
+    }, 100);
+    delay += 200;
   });
 
-  $('.leaf_fill').delay(2500).animate({
+  $('.leaf_fill').delay(1800).animate({
     opacity:0
   }, 500);
 
-  $('.button_box').delay(3000).animate({
+  $('.button_box').delay(2500).animate({
     opacity:1
   }, 500);
 
