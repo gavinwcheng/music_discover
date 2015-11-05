@@ -1,0 +1,23 @@
+<% @recommended_users.each do |user| %>
+  <%= user[0].username %>,
+  count: <%= user[1] %>
+<% end %>
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
+<% @recommended_spotify_users.each do |user| %>
+  <% user.playlists.each do |playlist| %>
+    <% playlist.tracks.each do |track| %>
+      <%= track.name %>-----
+      <%= track.album.name %>-----
+      <%= track.album.images.first %><br/>
+    <% end %>
+  <% end %>
+<% end %>
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
+<%= @common_artists.count %>
+<% @common_artists.each do |artist| %>
+  <%= artist.name %>
+<% end %>

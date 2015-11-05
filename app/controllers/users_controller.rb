@@ -15,13 +15,17 @@ class UsersController < ApplicationController
     @user = session[:current_user]
   end
 
-  def show_playlist
-    # user1 = User.find_by(username: session[:current_user].id)
-    # user1.artists.each do |artist|
-    #   artist.users.each do |user|
-    #
-    #   end
-    # end
-    @user = User.find_by(username: 'testing2')
+  def playlist
+    current_user = User.find_by(username: session[:current_user]['id'])
+    @recommended_users = current_user.as(:u1).artists.users(:u2).where('u2 <> u1').order('count(*) DESC').limit(10).pluck('u2', 'count(*)')
+
+    @recommended_spotify_users = Array.new
+    @recommended_users.each do |user|
+      @recommended_spotify_users << RSpotify::User.find(user[0].username)
+    end
+
+    
+
+    @common_artists = current_user.as(:u1).artists(:a).users(:u2).where('u2 <> u1').pluck('a')
   end
 end

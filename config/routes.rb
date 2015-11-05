@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'users/index', to: 'users#index'
   get '/auth/spotify/callback', to: 'users#spotify'
   get 'users/match', to: 'users#match'
-  get 'users/playlist', to: 'users#show_playlist'
+  get 'users/playlist', to: 'users#playlist'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
