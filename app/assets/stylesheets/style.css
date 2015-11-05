@@ -27,16 +27,18 @@ body {
 }
 
 #sign_in_box {
-  margin-left: 18.5%;  
+  margin-left: 18.5%;
   margin-top: 5%;
 }
 
 .link {
+  display: block;
   text-decoration: none;
 }
 
 .link:hover {
   background-color: #4fd477;
+  border-radius: 20px;
 }
 
 #sign_in {
@@ -61,7 +63,7 @@ body {
 
 #welcome_box {
   float: right;
-  padding: 40px;
+  padding: 30px;
   font-size: 200%;
 }
 
@@ -70,8 +72,9 @@ body {
   left: 50%;
   right: 50%;
   margin-right: -50%;
-  top: 43%;
+  top: -80%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 300%
+  font-size: 190%;
+  width: 100%;
 }
