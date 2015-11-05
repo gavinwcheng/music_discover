@@ -22,6 +22,10 @@ body {
   font-size: 20px;
 }
 
+#table {
+  max-width: 100%;
+}
+
 #sign_in_box {
   opacity: 0;
   margin-left: 18.5%;
