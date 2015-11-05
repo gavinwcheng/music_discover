@@ -49,10 +49,12 @@ body {
 
 #sign_in {
   color: #ffffff;
+  text-decoration: none;
 }
 
 #generate {
   color: #ffffff;
+  text-decoration: none;
 }
 
 #index_logo {
