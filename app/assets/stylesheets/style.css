@@ -13,6 +13,7 @@ body {
   }
 
 .button_box {
+  opacity: 0;
   width: 320px;
   height: 42px;
   background-color: #2EBD59;
@@ -76,19 +77,29 @@ body {
   font-size: 300%
 }
 
+.leaf_fill {
+  position: absolute;
+  background-color: #8944CA; 
+  opacity: 1;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-left: 161px;
+  margin-top: 35px;
+}
+
 .grape_fill {
   position: absolute;
-  background-color: #8944CA;
-  opacity: 0;
-  /*background-color: blue;*/
+  background-color: #8944CA;  /*purple */
+  opacity: 1;
   border-radius: 50%;
   width: 45px;
   height: 45px;
 }
 
-.grape_fill:hover {
+/*.grape_fill:hover {
   opacity: 1;
-}
+}*/
 
 #grape_0 {
   margin-left: 298px;
