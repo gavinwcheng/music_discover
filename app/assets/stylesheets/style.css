@@ -24,6 +24,7 @@ body {
 
 #sign_out_index {
   color: #fff;
+  text-decoration: none;
 }
 
 #table {
@@ -57,10 +58,12 @@ body {
 
 #sign_in {
   color: #ffffff;
+  text-decoration: none;
 }
 
 #generate {
   color: #ffffff;
+  text-decoration: none;
 }
 
 .button_divide {
