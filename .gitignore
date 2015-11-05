@@ -13,4 +13,4 @@
 /tmp
 
 /db/neo4j/*
-/config/environments/development.rb
+config/environments/development.rb
