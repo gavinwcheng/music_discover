@@ -1,50 +1,20 @@
-<% artists_array = @recommended_spotify_artists[@recommended_spotify_users[0].id] %>
-<% artist_name = artists_array[0].name %>
-<% track = artists_array[0].albums.first.tracks.first %>
-<% track_uri = track.uri%>
-<% track_name = track.name %>
+<% artists_array = artists_array_from_user(0) %>
 
 <div class="panel-group playlist_area" id="accordion" role="tablist" aria-multiselectable="true">
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingOne">
-      <h4 class="panel-title" id="clickable_track">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          <%= track_name %> ----- <%= artist_name %>
-        </a>
-      </h4>
-    </div>
-    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-      <div class="panel-body">
-        <iframe src="https://embed.spotify.com/?uri=<%= track_uri %>" width="100%" height="80"  frameborder="0" allowtransparency="true"></iframe>
+  <% for i in 0..19 %>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading<%= i %>">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= i %>" aria-expanded="true" aria-controls="collapse<%= i %>">
+            <%= first_track_from(artists_array, i).name %> ----- <%= name_of_artist_from(artists_array, i) %>
+          </a>
+        </h4>
+      </div>
+      <div id="collapse<%= i %>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading<%= i %>">
+        <div class="panel-body">
+          <iframe src="https://embed.spotify.com/?uri=<%= first_track_from(artists_array, i).uri %>" width="100%" height="80"  frameborder="0" allowtransparency="true"></iframe>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Collapsible Group Item #2
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Collapsible Group Item #3
-        </a>
-      </h4>
-    </div>
-    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-      <div class="panel-body">
-
-      </div>
-    </div>
-  </div> -->
+  <% end %>
 </div>
