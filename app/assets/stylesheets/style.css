@@ -3,6 +3,15 @@ body {
   /*font-family: Verdana, Geneva, sans-serif;*/
 }
 
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  background-color: transparent;
+  text-decoration: none !important;
+} 
+
 .central {
   position: absolute;
   top: 50%;
@@ -181,4 +190,12 @@ body {
 #grape_7 {
   margin-left: 241px;
   margin-top: 84px;
+}
+
+.playlist_area {
+  padding: 50px;
+}
+
+#clickable_track {
+  width: 100%;
 }
