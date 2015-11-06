@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'bootstrap-sass', '~> 3.3.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use SCSS for stylesheets
@@ -21,6 +21,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'rspotify'
+gem 'greensock-rails', '~> 1.18', '>= 1.18.0.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -36,6 +39,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'database_cleaner', github: 'DatabaseCleaner/database_cleaner'
+  gem 'factory_girl_rails'
 end
 
 group :development do
@@ -46,5 +50,6 @@ group :development do
   gem 'spring'
 end
 
-
 gem 'neo4j', '~> 5.2.7'
+# gem 'neo4j', '~> 5.2', '>= 5.2.13', '>= 5.2.14'
+# cd .

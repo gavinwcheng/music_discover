@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  get 'users/index' => 'users#index'
+  root 'users#index'
+  get 'users/index', to: 'users#index'
+  get 'auth/spotify/callback', to: 'users#spotify'
+  get 'users/signout', to: 'users#destroy'
+  get 'artists/match', to: 'artists#match'
+  get 'artists/playlist', to: 'artists#playlist'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

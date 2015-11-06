@@ -18,7 +18,9 @@ Bundler.require(*Rails.groups)
 
 module MusicDiscover
   class Application < Rails::Application
-    
+
+    RSpotify::authenticate(ENV['SPOTIFY_ID'], ENV['SPOTIFY_SECRET'])
+
     config.generators do |g|
       g.orm             :neo4j
     end
