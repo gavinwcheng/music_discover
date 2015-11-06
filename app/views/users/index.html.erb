@@ -7,15 +7,7 @@
 <% end %>
 
 <div class="central" id="logo_box">
-  <div class="leaf_fill"></div>
-  <div class="grape_fill" id="grape_0"></div>
-  <div class="grape_fill" id="grape_1"></div>
-  <div class="grape_fill" id="grape_2"></div>
-  <div class="grape_fill" id="grape_3"></div>
-  <div class="grape_fill" id="grape_4"></div>
-  <div class="grape_fill" id="grape_5"></div>
-  <div class="grape_fill" id="grape_6"></div>
-  <div class="grape_fill" id="grape_7"></div>
+  <%= render "grape_animation" %>
   <img src="/images/cropped_grape_logo_shadowed.png" id="index_logo">
     <div class="button_box" id="sign_in_box">
       <% if @user %>

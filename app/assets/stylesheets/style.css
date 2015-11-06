@@ -1,6 +1,5 @@
 body {
-  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-  /*font-family: Verdana, Geneva, sans-serif;*/
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important;
 }
 
 a {
@@ -102,7 +101,7 @@ a:hover {
   opacity: 0;
   float: right;
   padding: 30px;
-  font-size: 200%;
+  font-size: 180%;
 }
 
 #intro_text {
@@ -141,16 +140,11 @@ a:hover {
 .grape_fill {
   position: absolute;
   background-color: #8944CA;  /*purple  */
-  /*background-color: blue;*/
   opacity: 1;
   border-radius: 50%;
   width: 45px;
   height: 45px;
 }
-
-/*.grape_fill:hover {
-  opacity: 1;
-}*/
 
 #grape_0 {
   margin-left: 298px;
