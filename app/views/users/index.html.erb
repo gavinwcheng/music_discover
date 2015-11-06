@@ -1,8 +1,8 @@
-<% if @user %>
+<% if current_user %>
   <div id="welcome_box">
     Welcome,
-    <% name = @user["display_name"].split(" ").first %>
-    <%= link_to name, 'http://open.spotify.com/user/' + @user["id"], id:"name_link", :target => "_blank" %>
+    <% name = current_user["username"] %>
+    <%= link_to name, 'http://open.spotify.com/user/' + current_user["id"], id:"name_link", :target => "_blank" %>
   </div>
 <% end %>
 
@@ -18,10 +18,10 @@
   <div class="grape_fill" id="grape_7"></div>
   <img src="/images/cropped_grape_logo_shadowed.png" id="index_logo">
     <div class="button_box" id="sign_in_box">
-      <% if @user %>
+      <% if current_user %>
         <%= link_to 'Generate a playlist', '/artists/playlist', class:"link", id:"generate"%>
         <div class="button_divide"></div>
-        <%= link_to 'Sign out', '/users/signout', class:"button_box link", id:"sign_out_index", method: :get%>
+        <%= link_to 'Sign out', '/users/signout', class:"button_box link", id:"sign_out_index", method: :delete%>
       <% else %>
         <%= link_to 'Sign in to Grape with Spotify', '/auth/spotify', class:"link", id:"sign_in"%>
       <% end %>
