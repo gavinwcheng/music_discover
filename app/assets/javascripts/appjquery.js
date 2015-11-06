@@ -7,6 +7,10 @@ $(document).ready(function() {
 
   // $('.button_box').hide();
 
+  for(i = 0; i <= 19; i++){
+    $('#collapse' + i).collapse("hide");
+  };
+
   var delay = 0;
   $('.grape_fill').each(function() {
     $(this).delay(delay).animate({

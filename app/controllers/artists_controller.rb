@@ -11,4 +11,5 @@ class ArtistsController < ApplicationController
     overlapped_artists = identify_overlapped_artists current_user
     retrieve_info_from_spotify recommended_users, overlapped_artists
   end
+
 end

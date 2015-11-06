@@ -196,4 +196,35 @@ a:hover {
   padding: 50px;
 }
 
+.panel {
+  margin-top: 0px !important;
+}
+
+.playlist_header {
+  width: 92.5%;
+  height: 34px;
+  margin-left: 48px;
+  position: absolute;
+  margin-top: 26px;
+}
+
+.playlist_header_column {
+  /*float: left;*/
+  display: inline-block;
+}
+
+#title_header {
+  width: 43%;
+  margin-left: 15px;
+}
+
+.playlist_item {
+  display: inline-block;
+  /*border: solid blue;  */
+}
+
+#playlist_title {
+  width: 44%;
+}
+
 
