@@ -209,7 +209,6 @@ a:hover {
 }
 
 .playlist_header_column {
-  /*float: left;*/
   display: inline-block;
 }
 
@@ -220,11 +219,14 @@ a:hover {
 
 .playlist_item {
   display: inline-block;
-  /*border: solid blue;  */
 }
 
 #playlist_title {
   width: 44%;
+}
+
+#playlist_artist {
+  width: 56%;
 }
 
 
