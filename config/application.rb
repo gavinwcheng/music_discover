@@ -19,7 +19,7 @@ Bundler.require(*Rails.groups)
 module MusicDiscover
   class Application < Rails::Application
 
-    config.serve_static_assets = true
+    config.serve_static_files = true
 
     RSpotify::authenticate(ENV['SPOTIFY_ID'], ENV['SPOTIFY_SECRET'])
 
