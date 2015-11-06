@@ -193,7 +193,9 @@ a:hover {
 }
 
 .playlist_area {
+  opacity: 0;
   padding: 50px;
+  padding-top: 192px;
 }
 
 .panel {
@@ -201,11 +203,12 @@ a:hover {
 }
 
 .playlist_header {
+  opacity: 0;
   width: 92.5%;
   height: 34px;
   margin-left: 48px;
   position: absolute;
-  margin-top: 26px;
+  margin-top: 170px;
 }
 
 .playlist_header_column {
@@ -214,7 +217,7 @@ a:hover {
 
 #title_header {
   width: 43%;
-  margin-left: 15px;
+  margin-left: 17px;
 }
 
 .playlist_item {

@@ -39,4 +39,12 @@ $(document).ready(function() {
     opacity:1
   }, 500);
 
+  $('.playlist_area').delay(500).animate({
+    opacity:1
+  }, 500);
+
+  $('.playlist_header').delay(500).animate({
+    opacity:1
+  }, 500);
+
 });
