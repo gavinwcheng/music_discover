@@ -7,17 +7,18 @@
     </div>
   <% end %>
 
-  <div class="central" id="logo_box">
-    <div class="leaf_fill"></div>
-    <div class="grape_fill" id="grape_0"></div>
-    <div class="grape_fill" id="grape_1"></div>
-    <div class="grape_fill" id="grape_2"></div>
-    <div class="grape_fill" id="grape_3"></div>
-    <div class="grape_fill" id="grape_4"></div>
-    <div class="grape_fill" id="grape_5"></div>
-    <div class="grape_fill" id="grape_6"></div>
-    <div class="grape_fill" id="grape_7"></div>
-    <img src="/images/cropped_grape_logo_shadowed.png" id="index_logo">
+  <div class="central">
+    <div id="logo_box">
+      <div class="leaf_fill"></div>
+      <div class="grape_fill" id="grape_0"></div>
+      <div class="grape_fill" id="grape_1"></div>
+      <div class="grape_fill" id="grape_2"></div>
+      <div class="grape_fill" id="grape_3"></div>
+      <div class="grape_fill" id="grape_4"></div>
+      <div class="grape_fill" id="grape_5"></div>
+      <div class="grape_fill" id="grape_6"></div>
+      <div class="grape_fill" id="grape_7"></div>
+      <img src="/images/cropped_grape_logo_shadowed.png" id="index_logo">
       <div class="button_box" id="sign_in_box">
         <% if @user %>
           <%= link_to 'Generate a playlist', '/artists/playlist', class:"link", id:"generate"%>
@@ -27,9 +28,10 @@
           <%= link_to 'Sign in to Grape with Spotify', '/auth/spotify', class:"link", id:"sign_in"%>
         <% end %>
       </div>
+    </div>
+    <div id="about_text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
   </div>
 
-  <div class="central" id="about_text">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </div>
 </body>
