@@ -1,12 +1,6 @@
 $(document).ready(function() {
   console.log('working');
 
-  // for(i=0; i<8; i++) {
-  //   $('#grape_' + i).hide();
-  // };
-
-  // $('.button_box').hide();
-
   var delay = 0;
   $('.grape_fill').each(function() {
     $(this).delay(delay).animate({
@@ -35,13 +29,23 @@ $(document).ready(function() {
     opacity:1
   }, 500);
 
-  var target = $('#logo_box');
-  var targetHeight = target.outerHeight();
+  var logoTarget = $('#logo_box');
+  var logoTargetHeight = 200
 
   $(document).scroll(function(e){
-      var scrollPercent = ((targetHeight) - window.scrollY) / (targetHeight);
+      var scrollPercent = (logoTargetHeight - window.scrollY) / logoTargetHeight;
       if(scrollPercent >= 0){
-          target.css('opacity', scrollPercent);
+          logoTarget.css('opacity', scrollPercent);
+      }
+  });
+
+  var textTarget = $('#about_text');
+  var textTargetHeight = 300
+
+  $(document).scroll(function(e){
+      var scrollPercent = 1 - ((textTargetHeight - window.scrollY) / textTargetHeight);
+      if(scrollPercent >= 0){
+          textTarget.css('opacity', scrollPercent);
       }
   });
 

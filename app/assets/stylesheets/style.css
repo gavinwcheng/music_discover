@@ -182,3 +182,10 @@ body {
   margin-left: 241px;
   margin-top: 84px;
 }
+
+#about_text {
+  opacity: 0;
+  width: 40%;
+  margin-top: 265px;
+  font-size: 120%;
+}
