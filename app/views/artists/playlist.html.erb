@@ -22,27 +22,4 @@
       </div>
     </div>
   <% end %>
-<<<<<<< HEAD
 </div>
-=======
-  <%= user.id %><br/><br/>
-
-  <br/><br/>
-  <% a = [] %>
-  <% @recommended_spotify_artists[user.id].each do |artist| %>
-    <% if artist %>
-      <table class="table table-hover">
-        <tr class="tablerow">
-
-           <% current_track = artist.albums.first.tracks.shuffle.first %>
-          <% a << current_track %>
-          <td><iframe src="https://embed.spotify.com/?uri=<%= current_track.uri %>" width="100%" height="80"  frameborder="0" allowtransparency="true"></iframe></td>
-          <td><button><%@yooser.save_tracks!(a)%>Save track</button></td>
-
-
-
-        </tr>
-    <% end %><br/><br/>
-  <% end %><br/><br/>
-<% end %>
->>>>>>> eeb817b2bfb99e95e652ed2bb731687f5e05a880
