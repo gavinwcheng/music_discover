@@ -1,11 +1,11 @@
 <body style="height:980px">
-  <% if @user %>
-    <div id="welcome_box">
-      Welcome,
-      <% name = @user["display_name"].split(" ").first %>
-      <%= link_to name, 'http://open.spotify.com/user/' + @user["id"], id:"name_link", :target => "_blank" %>
-    </div>
-  <% end %>
+<% if @user %>
+  <div id="welcome_box">
+    Welcome,
+    <% name = @user["id"].split(" ").first %>
+    <%= link_to name, 'http://open.spotify.com/user/' + @user["id"], id:"name_link", :target => "_blank" %>
+  </div>
+<% end %>
 
   <div class="central">
     <div id="logo_box">
