@@ -184,8 +184,8 @@ body {
 }
 
 #about_text {
+  position: relative;
   opacity: 0;
   width: 40%;
-  margin-top: 265px;
   font-size: 120%;
 }
