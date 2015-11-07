@@ -1,7 +1,8 @@
+<body style="height:980px">
 <% if @user %>
   <div id="welcome_box">
     Welcome,
-    <% name = @user["display_name"].split(" ").first %>
+    <% name = @user["id"].split(" ").first %>
     <%= link_to name, 'http://open.spotify.com/user/' + @user["id"], id:"name_link", :target => "_blank" %>
   </div>
 <% end %>
@@ -18,4 +19,9 @@
         <%= link_to 'Sign in to Grape with Spotify', '/auth/spotify', class:"link", id:"sign_in"%>
       <% end %>
     </div>
-</div>
+    <div id="about_text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+  </div>
+
+</body>
