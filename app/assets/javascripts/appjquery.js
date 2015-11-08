@@ -1,5 +1,15 @@
 $(document).ready(function() {
   console.log('working');
+
+  for(i=0; i<20; i++) {
+    if(i % 2 == 0) {
+      $('#heading' + i).css({"background-color": "#f3e5f9"});
+      $('#collapse' + i).css({"background-color": "#f3e5f9"});
+    } else {
+      $('#heading' + i).css({"background-color": "#ebfaeb"});
+      $('#collapse' + i).css({"background-color": "#ebfaeb"});
+    };
+  };
   
   for(i = 0; i <= 19; i++){
     $('#collapse' + i).collapse("hide");
