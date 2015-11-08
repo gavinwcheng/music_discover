@@ -17,10 +17,7 @@ class ArtistsController < ApplicationController
   def save_track
     user = RSpotify::User.find(params[:userid])
     track = RSpotify::Track.find(params[:trackid])
-    p user
-    p track
-    a = [track]
-    user.save_tracks!(a)
+    user.save_tracks!([track])
     redirect_to '/artists/playlist'
   end
 
