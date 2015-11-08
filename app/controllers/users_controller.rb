@@ -16,4 +16,6 @@ class UsersController < ApplicationController
     session[:current_user] = nil
     redirect_to '/users/index'
   end
+
+
 end

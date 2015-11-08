@@ -14,4 +14,15 @@ class ArtistsController < ApplicationController
     retrieve_info_from_spotify recommended_users, overlapped_artists
   end
 
+  def save_track
+    user = RSpotify::User.find(params[:userid])
+    track = RSpotify::Track.find(params[:trackid])
+    p user
+    p track
+    a = [track]
+    user.save_tracks!(a)
+    redirect_to '/artists/playlist'
+  end
+
+
 end
