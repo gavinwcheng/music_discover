@@ -2,7 +2,11 @@
 <% if @user %>
   <div id="welcome_box">
     Welcome,
-    <% name = @user["id"].split(" ").first %>
+    <% if @user["display_name"] == nil %>
+       <% name = @user["id"] %>
+    <% else %>
+      <% name = @user["display_name"].split(" ").first %>
+    <% end %>
     <%= link_to name, 'http://open.spotify.com/user/' + @user["id"], id:"name_link", :target => "_blank" %>
   </div>
 <% end %>
