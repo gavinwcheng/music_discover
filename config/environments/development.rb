@@ -33,7 +33,7 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
 
-  # Raises error for missing translations
+  # Raises error for missing translations§
   # config.action_view.raise_on_missing_translations = true
   config.neo4j.session_type = :server_db
   config.neo4j.session_path = ENV['GRAPHENEDB_URL'] || 'http://localhost:7474'

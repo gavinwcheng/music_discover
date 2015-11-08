@@ -19,7 +19,9 @@
         <div id="collapse<%= i %>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading<%= i %>">
           <div class="panel-body">
             <iframe src="https://embed.spotify.com/?uri=<%= first_track_from(artists_array, i).uri %>" width="80px" height="80" frameborder="0" allowtransparency="true"></iframe>
-            <%= link_to "Save Track", artists_save_path({userid: @yooser.id, trackid: first_track_from(artists_array, i).id}).to_param, method: :post %>
+            <% unless @yooser.saved_tracks?([first_track_from(artists_array, i)]).first %>
+              <%= link_to "Save Track", artists_save_path({userid: @yooser.id, trackid: first_track_from(artists_array, i).id}).to_param, method: :post %>
+            <% end %>
           </div>
         </div>
       </div>
