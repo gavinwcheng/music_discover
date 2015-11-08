@@ -17,4 +17,6 @@ class UsersController < ApplicationController
     flash[:notice] = 'Signed out from Grape successully. Please note you are still signed in with Spotify.'
     redirect_to '/users/index'
   end
+
+
 end
