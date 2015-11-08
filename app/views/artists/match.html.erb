@@ -1,17 +1,8 @@
-<%= link_to image_tag("/images/cropped_grape_logo_shadowed.png", :width => 130, :height => 130), '/users/index', id:"welcome_logo", method: :get %>
-<!-- <img src="/images/cropped_grape_logo.png" id="welcome_logo"> -->
-
-
-<div id="welcome_box">
-  Welcome,
-  <% name = @user["id"].split(" ").first %>
-  <%= link_to name, 'http://open.spotify.com/user/' + @user["id"], id:"name_link", :target => "_blank" %>
-</div>
-
+<%= render "welcome_bar" %>
 
 <div class="central button_box" id="generate_playlist_box">
   <div id="intro_text">
     Click below to
   </div>
-  <%= link_to 'generate a playlist', '/artists/playlist', class:"link", id:"generate"%>
+  <%= link_to 'generate a playlist', '/artists/playlist', class:"link", id:"generate", method: :get %>
 </div>

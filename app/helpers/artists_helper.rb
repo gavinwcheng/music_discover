@@ -38,4 +38,16 @@ module ArtistsHelper
       end
     end
   end
+
+  def artists_array_from_user index
+    @recommended_spotify_artists[@recommended_spotify_users[index].id]
+  end
+
+  def name_of_artist_from(artist_array, index)
+    artist_array[index].name
+  end
+
+  def first_track_from(artist_array, index)
+    artist_array[index].albums.first.tracks.first
+  end
 end
