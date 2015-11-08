@@ -1,34 +1,32 @@
 <body style="height:980px">
-  <% if current_user %>
-    <div id="welcome_box">
-      Welcome,
-      <% name = current_user["username"] %>
-      <%= link_to name, 'http://open.spotify.com/user/' + current_user["id"], id:"name_link", :target => "_blank" %>
-    </div>
-  <% end %>
-
-  <div class="central" id="logo_box">
-    <div class="leaf_fill"></div>
-    <div class="grape_fill" id="grape_0"></div>
-    <div class="grape_fill" id="grape_1"></div>
-    <div class="grape_fill" id="grape_2"></div>
-    <div class="grape_fill" id="grape_3"></div>
-    <div class="grape_fill" id="grape_4"></div>
-    <div class="grape_fill" id="grape_5"></div>
-    <div class="grape_fill" id="grape_6"></div>
-    <div class="grape_fill" id="grape_7"></div>
-    <img src="/images/cropped_grape_logo_shadowed.png" id="index_logo">
-      <div class="button_box" id="sign_in_box">
-        <% if current_user %>
-          <%= link_to 'Generate a playlist', '/artists/playlist', class:"link", id:"generate"%>
-          <div class="button_divide"></div>
-          <%= link_to 'Sign out', '/users/signout', class:"button_box link", id:"sign_out_index", method: :delete%>
-        <% else %>
-          <%= link_to 'Sign in to Grape with Spotify', '/auth/spotify', class:"link", id:"sign_in"%>
-        <% end %>
-      </div>
-      <div id="about_text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </div>
+<% if @user %>
+  <div id="welcome_box">
+    Welcome,
+    <% if @user["display_name"] == nil %>
+       <% name = @user["id"] %>
+    <% else %>
+      <% name = @user["display_name"].split(" ").first %>
+    <% end %>
+    <%= link_to name, 'http://open.spotify.com/user/' + @user["id"], id:"name_link", :target => "_blank" %>
   </div>
+<% end %>
+
+<div class="central">
+  <div id="logo_box">
+    <%= render "grape_animation" %>
+    <img src="/images/cropped_grape_logo_shadowed.png" id="index_logo">
+    <div class="button_box" id="sign_in_box">
+      <% if @user %>
+        <%= link_to 'Generate a playlist', '/artists/playlist', class:"link", id:"generate", method: :get %>
+        <div class="button_divide"></div>
+        <%= link_to 'Sign out', '/users/signout', class:"button_box link", id:"sign_out_index", method: :get %>
+      <% else %>
+        <%= link_to 'Sign in to Grape with Spotify', '/auth/spotify', class:"link", id:"sign_in"%>
+      <% end %>
+    </div>
+  </div>
+  <div id="about_text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+</div>
 </body>

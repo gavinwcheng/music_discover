@@ -1,7 +1,15 @@
 body {
   font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important;
-  /*font-family: Verdana, Geneva, sans-serif;*/
 }
+
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  background-color: transparent;
+  text-decoration: none !important;
+} 
 
 .central {
   position: absolute;
@@ -93,7 +101,7 @@ body {
   opacity: 0;
   float: right;
   padding: 30px;
-  font-size: 200%;
+  font-size: 180%;
 }
 
 #intro_text {
@@ -132,16 +140,11 @@ body {
 .grape_fill {
   position: absolute;
   background-color: #8944CA;  /*purple  */
-  /*background-color: blue;*/
   opacity: 1;
   border-radius: 50%;
   width: 45px;
   height: 45px;
 }
-
-/*.grape_fill:hover {
-  opacity: 1;
-}*/
 
 #grape_0 {
   margin-left: 298px;
@@ -181,6 +184,46 @@ body {
 #grape_7 {
   margin-left: 241px;
   margin-top: 84px;
+}
+
+.playlist_area {
+  opacity: 0;
+  padding: 90px;
+  padding-top: 192px;
+}
+
+.panel {
+  margin-top: 0px !important;
+}
+
+.playlist_header {
+  opacity: 0;
+  width: 92.5%;
+  height: 34px;
+  margin-left: 48px;
+  position: absolute;
+  margin-top: 170px;
+}
+
+.playlist_header_column {
+  display: inline-block;
+}
+
+#title_header {
+  width: 40.5%;
+  margin-left: 58px;
+}
+
+.playlist_item {
+  display: inline-block;
+}
+
+#playlist_title {
+  width: 44.8%;
+}
+
+#playlist_artist {
+  width: 55%;
 }
 
 #about_text {
