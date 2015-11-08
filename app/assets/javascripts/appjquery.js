@@ -1,6 +1,20 @@
 $(document).ready(function() {
   console.log('working');
 
+  for(i=0; i<20; i++) {
+    if(i % 2 == 0) {
+      $('#heading' + i).css({"background-color": "#f3e5f9"});
+      $('#collapse' + i).css({"background-color": "#f3e5f9"});
+    } else {
+      $('#heading' + i).css({"background-color": "#ebfaeb"});
+      $('#collapse' + i).css({"background-color": "#ebfaeb"});
+    };
+  };
+  
+  for(i = 0; i <= 19; i++){
+    $('#collapse' + i).collapse("hide");
+  };
+
   var delay = 0;
   $('.grape_fill').each(function() {
     $(this).delay(delay).animate({
@@ -29,6 +43,14 @@ $(document).ready(function() {
     opacity:1
   }, 500);
 
+  $('.playlist_area').delay(500).animate({
+    opacity:1
+  }, 500);
+
+  $('.playlist_header').delay(500).animate({
+    opacity:1
+  }, 500);
+
   var logoTarget = $('#logo_box');
   var logoTargetHeight = 200
 
@@ -48,6 +70,5 @@ $(document).ready(function() {
           textTarget.css('opacity', scrollPercent);
       }
   });
-
 
 });
