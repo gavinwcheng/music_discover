@@ -32,7 +32,7 @@ module ArtistsHelper
   end
 
   def artists_array_from_user index
-    @recommended_spotify_artists[@recommended_spotify_users[index].id]
+    @recommended_spotify_artists[@recommended_spotify_users[index].id] if @recommended_spotify_users[index]
   end
 
   def name_of_artist_from(artist_array, index)
