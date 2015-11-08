@@ -1,13 +1,13 @@
 <body style="height:980px">
-<% if @user %>
+<% if current_user %>
   <div id="welcome_box">
     Welcome,
-    <% if @user["display_name"] == nil %>
-       <% name = @user["id"] %>
+    <% if current_user.display_name == nil %>
+       <% name = current_user.username %>
     <% else %>
-      <% name = @user["display_name"].split(" ").first %>
+      <% name = current_user.display_name.split(" ").first %>
     <% end %>
-    <%= link_to name, 'http://open.spotify.com/user/' + @user["id"], id:"name_link", :target => "_blank" %>
+    <%= link_to name, 'http://open.spotify.com/user/' + current_user.username, id:"name_link", :target => "_blank" %>
   </div>
 <% end %>
 
@@ -16,10 +16,10 @@
     <%= render "grape_animation" %>
     <img src="/images/cropped_grape_logo_shadowed.png" id="index_logo">
     <div class="button_box" id="sign_in_box">
-      <% if @user %>
+      <% if current_user %>
         <%= link_to 'Generate a playlist', '/artists/playlist', class:"link", id:"generate", method: :get %>
         <div class="button_divide"></div>
-        <%= link_to 'Sign out', '/users/signout', class:"button_box link", id:"sign_out_index", method: :get %>
+        <%= link_to 'Sign out', '/users/signout', class:"button_box link", id:"sign_out_index", method: :delete %>
       <% else %>
         <%= link_to 'Sign in to Grape with Spotify', '/auth/spotify', class:"link", id:"sign_in"%>
       <% end %>
