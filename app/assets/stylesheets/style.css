@@ -1,5 +1,5 @@
 body {
-  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important;
   /*font-family: Verdana, Geneva, sans-serif;*/
 }
 
@@ -181,4 +181,11 @@ body {
 #grape_7 {
   margin-left: 241px;
   margin-top: 84px;
+}
+
+#about_text {
+  position: absolute;
+  opacity: 0;
+  font-size: 120%;
+  margin-top: 85px;
 }
