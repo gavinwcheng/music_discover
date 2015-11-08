@@ -1,24 +1,22 @@
 class ArtistsController < ApplicationController
   include ArtistsHelper
+  include RspotifyHelper
+  include RecommendationHelper
 
   def match
   end
 
   def playlist
-    @user = session[:current_user]
-    @yooser = RSpotify::User.new(session[:current_user].to_hash)
-    current_user = User.find_by(username: session[:current_user]['id'])
-    recommended_users = recommend_users current_user
-    overlapped_artists = identify_overlapped_artists current_user
-    retrieve_info_from_spotify recommended_users, overlapped_artists
+    @yooser = retrieve_spotify_user(current_user)
+    recommended_users = recommend_users(current_user)
+    overlapped_artists = identify_overlapped_artists(current_user)
+    retrieve_info_from_spotify(recommended_users, overlapped_artists)
   end
 
   def save_track
-    user = RSpotify::User.find(params[:userid])
-    track = RSpotify::Track.find(params[:trackid])
+    user = retrieve_spotify_user(params[:userid])
+    track = retrieve_spotify_track(params[:trackid])
     user.save_tracks!([track])
     redirect_to '/artists/playlist'
   end
-
-
 end
