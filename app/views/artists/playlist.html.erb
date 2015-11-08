@@ -10,14 +10,10 @@
     <% if artist %>
       <table class="table table-hover">
         <tr class="tablerow">
-
-           <% current_track = artist.albums.first.tracks.shuffle.first %>
+          <% current_track = artist.albums.first.tracks.shuffle.first %>
           <% a << current_track %>
           <td><iframe src="https://embed.spotify.com/?uri=<%= current_track.uri %>" width="100%" height="80"  frameborder="0" allowtransparency="true"></iframe></td>
           <td><button><%@yooser.save_tracks!(a)%>Save track</button></td>
-
-
-
         </tr>
     <% end %><br/><br/>
   <% end %><br/><br/>
