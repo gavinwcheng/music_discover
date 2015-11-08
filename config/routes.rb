@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'users#index'
   get 'users/index', to: 'users#index'
   get 'auth/spotify/callback', to: 'users#spotify'
-  get 'users/signout', to: 'users#destroy'
+  delete 'users/signout', to: 'users#destroy'
   get 'artists/match', to: 'artists#match'
   get 'artists/playlist', to: 'artists#playlist'
 

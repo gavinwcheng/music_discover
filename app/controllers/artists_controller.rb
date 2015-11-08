@@ -2,7 +2,6 @@ class ArtistsController < ApplicationController
   include ArtistsHelper
 
   def match
-    @user = session[:current_user]
   end
 
   def playlist
