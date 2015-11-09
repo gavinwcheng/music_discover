@@ -243,3 +243,8 @@ a:hover {
 .img_circle {
   border-radius: 50%;
 }
+
+.sign_out_notice {
+  opacity: 0;
+  margin-top: 15px;
+}

@@ -31,6 +31,10 @@ $(document).ready(function() {
     opacity:1
   }, 500);
 
+  $('.sign_out_notice').delay(2500).animate({
+    opacity:1
+  }, 500);
+
   $('#generate_playlist_box').delay(500).animate({
     opacity:1
   }, 500);

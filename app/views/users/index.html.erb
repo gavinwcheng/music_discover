@@ -31,6 +31,9 @@
         <%= link_to 'Sign in to Grape with Spotify', '/auth/spotify', class:"link", id:"sign_in"%>
       <% end %>
     </div>
+    <% if notice %>
+      <div class="sign_out_notice"><%= notice %></div>
+    <% end %>
   </div>
   <div id="about_text">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
