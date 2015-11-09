@@ -8,6 +8,8 @@ class UsersController < ApplicationController
   def sync_profile
     current_spotify_user = instantiate_spotify_user(request.env['omniauth.auth'])
     current_database_user = User.merge(username: current_spotify_user.id, email: current_spotify_user.email)
+    current_database_user.display_name = current_spotify_user.display_name if current_spotify_user.display_name
+    current_database_user.save
     session[:user_id] = current_database_user.id
     save_artists(current_spotify_user, current_database_user)
     redirect_to '/artists/match'
