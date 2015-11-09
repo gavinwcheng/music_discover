@@ -10,7 +10,7 @@ $(document).ready(function() {
       $('#collapse' + i).css({"background-color": "#ebfaeb"});
     };
   };
-  
+
   for(i = 0; i <= 19; i++){
     $('#collapse' + i).collapse("hide");
   };
@@ -46,6 +46,10 @@ $(document).ready(function() {
   $('#welcome_box').delay(500).animate({
     opacity:1
   }, 500);
+
+  $('#user_img').delay(500).animate({
+    opacity:1
+  }, 500); 
 
   $('.playlist_area').delay(500).animate({
     opacity:1
