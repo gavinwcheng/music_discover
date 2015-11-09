@@ -25,6 +25,7 @@ $(document).ready(function() {
 
   $('.save_track_link').click(function() {
         $(this).text("Saved");
+        $(this).css({"background-color":"#8944ca"})
   });
 
   $('.leaf_fill').delay(1800).animate({
