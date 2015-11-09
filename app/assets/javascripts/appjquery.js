@@ -23,6 +23,11 @@ $(document).ready(function() {
     delay += 200;
   });
 
+  $('.save_track_link').click(function() {
+        $(this).text("Saved");
+        $(this).css({"background-color":"#8944ca"})
+  });
+
   $('.leaf_fill').delay(1800).animate({
     opacity:0
   }, 500);
@@ -49,7 +54,7 @@ $(document).ready(function() {
 
   $('#user_img').delay(500).animate({
     opacity:1
-  }, 500); 
+  }, 500);
 
   $('.playlist_area').delay(500).animate({
     opacity:1

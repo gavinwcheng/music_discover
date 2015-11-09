@@ -22,7 +22,7 @@
           <div class="panel-body">
             <iframe src="https://embed.spotify.com/?uri=<%= track.uri %>" width="80px" height="80" frameborder="0" allowtransparency="true"></iframe>
             <% unless retrieve_spotify_user(current_user).saved_tracks?([track]).first %>
-              <%= link_to "Save Track", artists_save_path({trackid: track.id}).to_param, class:"save_track_link", method: :post, remote: :true %>
+                <%= link_to "Save Track", artists_save_path({trackid: track.id}).to_param, class:"save_track_link", method: :post, remote: :true %>
             <% end %>
           </div>
         </div>
