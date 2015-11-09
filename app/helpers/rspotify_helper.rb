@@ -11,7 +11,7 @@ module RspotifyHelper
     RSpotify::Artist.search(artist.name)
   end
 
-  def retrieve_spotify_track(track)
-    RSpotify::Track.find(track)
+  def retrieve_spotify_track(track_id)
+    RSpotify::Track.find(track_id)
   end
 end
