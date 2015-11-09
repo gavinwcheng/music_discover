@@ -40,6 +40,6 @@ module ArtistsHelper
   end
 
   def first_track_from(artist_array, index)
-    artist_array[index].albums.first.tracks.first
+    artist_array[index].albums.first.tracks.shuffle.first
   end
 end
