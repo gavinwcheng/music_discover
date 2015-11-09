@@ -8,18 +8,21 @@
   </div>
   <div class="panel-group playlist_area" id="accordion" role="tablist" aria-multiselectable="true">
     <% for i in 0..19 %>
+      <% track = random_track_from(artists_array, i) %>
       <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="heading<%= i %>">
           <h4 class="panel-title">
             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= i %>" aria-expanded="true" aria-controls="collapse<%= i %>">
-              <span class="playlist_item" id="playlist_title"><%= first_track_from(artists_array, i).name %></span><span class="playlist_item" id="playlist_artist"><%= name_of_artist_from(artists_array, i) %></span>
+              <span class="playlist_item" id="playlist_title"><%= track.name %></span><span class="playlist_item" id="playlist_artist"><%= name_of_artist_from(artists_array, i) %></span>
             </a>
           </h4>
         </div>
         <div id="collapse<%= i %>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading<%= i %>">
           <div class="panel-body">
             <iframe src="https://embed.spotify.com/?uri=<%= first_track_from(artists_array, i).uri %>" width="80px" height="80" frameborder="0" allowtransparency="true"></iframe>
-            <%= link_to "Save Track", artists_save_path({trackid: first_track_from(artists_array, i).id}).to_param, method: :post %>
+            <% unless retrieve_spotify_user(current_user).saved_tracks?([track]).first %>
+              <%= link_to "Save Track", artists_save_path({trackid: track.id}).to_param, method: :post %>
+            <% end %>
           </div>
         </div>
       </div>
