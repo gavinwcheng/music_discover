@@ -9,7 +9,7 @@ a {
 a:hover {
   background-color: transparent;
   text-decoration: none !important;
-} 
+}
 
 .central {
   position: absolute;
@@ -100,8 +100,15 @@ a:hover {
 #welcome_box {
   opacity: 0;
   float: right;
-  padding: 30px;
+  padding: 50px;
+  padding-right: 10px;
   font-size: 180%;
+}
+
+#user_img {
+  opacity: 0;
+  float: right;
+  padding: 20px;
 }
 
 #intro_text {
@@ -233,7 +240,28 @@ a:hover {
   margin-top: 85px;
 }
 
+.img_circle {
+  border-radius: 50%;
+}
+
 .sign_out_notice {
   opacity: 0;
   margin-top: 15px;
+}
+
+.save_track_link {
+  position: absolute;
+  background-color: #2ebd59;
+  color: #fff;
+  border-radius: 20px;
+  text-align: center;
+  padding: 3px 20px;
+  margin-left: 20px;
+  margin-top: 28px;
+}
+
+.save_track_link:hover {
+  background-color: #4fd477;
+  border-radius: 20px; 
+  color: #fff; 
 }
