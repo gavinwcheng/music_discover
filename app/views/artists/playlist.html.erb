@@ -24,14 +24,16 @@
               <iframe src="https://embed.spotify.com/?uri=<%= track.uri %>" width="80px" height="80" frameborder="0" allowtransparency="true"></iframe>
               <% unless retrieve_spotify_user(current_user).saved_tracks?([track]).first %>
                   <%= link_to "Save Track", artists_save_path({trackid: track.id}).to_param, class:"save_track_link", method: :post, remote: :true %>
+                  <iframe class="follow_artist" src="https://embed.spotify.com/follow/1/?uri=<%= uri_of_artist_from(artists_array, i) %>" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
               <% end %>
-            </div>
           </div>
         </div>
         <% i += 1 %>
       <% end %>
     </div>
   <% end %>
+
+</div>
 
   <div class="central" id="recom_user">
     <div id="recom_user_box">
@@ -46,4 +48,3 @@
       <iframe src="https://embed.spotify.com/follow/1/?uri=spotify:user:<%=user_id%>&size=basic&theme=light" width="200" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
     </div>
   </div>
-</div>

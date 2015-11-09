@@ -211,8 +211,7 @@ a:hover {
 
 .playlist_area {
   opacity: 0;
-  padding: 90px;
-  padding-top: 192px;
+  padding: 0px 90px;
 }
 
 .panel {
@@ -221,11 +220,9 @@ a:hover {
 
 .playlist_header {
   opacity: 0;
-  width: 92.5%;
+  width: 100%;
   height: 34px;
-  margin-left: 48px;
-  position: absolute;
-  margin-top: 170px;
+  padding: 170px 90px 25px 90px;
 }
 
 .playlist_header_column {
@@ -233,8 +230,8 @@ a:hover {
 }
 
 #title_header {
-  width: 40.5%;
-  margin-left: 58px;
+  width: 45%;
+  padding-left: 15px;
 }
 
 .playlist_item {
@@ -285,4 +282,10 @@ a:hover {
 #follow_button {
   margin-top: 12px;
   margin-left: 5.5%;
+}
+
+.follow_artist {
+  margin-left: 465px;
+  margin-bottom: 1px;
+  margin-top: 2px;
 }

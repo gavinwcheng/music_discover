@@ -8,9 +8,6 @@ class ArtistsController < ApplicationController
 
   def playlist
     @recommended_users = recommend_users(current_user)
-    p ' '
-    p @recommended_users.first[0].username
-    p ' '
     overlapped_artists = identify_overlapped_artists(current_user)
     retrieve_info_from_spotify(@recommended_users, overlapped_artists)
   end
