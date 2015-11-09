@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   include RspotifyHelper
 
   def index
+      @current_spotify_user = RSpotify::User.find(current_user.username)
   end
 
   def sync_profile

@@ -1,18 +1,18 @@
 <%= link_to image_tag("/images/cropped_grape_logo_shadowed.png", :width => 130, :height => 130), '/users/index', id:"welcome_logo", method: :get %>
 
-<div id="welcome_box">
-  Welcome,
-  <% if current_user.display_name == nil %>
-     <% name = current_user.username %>
-  <% else %>
-    <% name = current_user.display_name.split(" ").first %>
+<div id="user_img">
+  <% if @current_spotify_user.images.first %>
+    <%= image_tag(@current_spotify_user.images.first['url'], :width => 100, :height => 100, :class => "img_circle") %>
   <% end %>
+</div>
 
-  <%= link_to name, 'http://open.spotify.com/user/' + current_user.username, id:"name_link", :target => "_blank" %>
-
-  <div id="current_user_image">
-    <% if @current_spotify_user.images.first %>
-      <%= image_tag(@current_spotify_user.images.first['url']) %>
+<div id="welcome_box">
+    Welcome,
+    <% if current_user.display_name == nil %>
+       <% name = current_user.username %>
+    <% else %>
+      <% name = current_user.display_name.split(" ").first %>
     <% end %>
-  </div>
+
+    <%= link_to name, 'http://open.spotify.com/user/' + current_user.username, id:"name_link", :target => "_blank" %>
 </div>
