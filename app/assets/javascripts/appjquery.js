@@ -52,6 +52,10 @@ $(document).ready(function() {
     opacity:1
   }, 500);
 
+  $('#recom_user').delay(500).animate({
+    opacity:1
+  }, 500);
+
   $('#user_img').delay(500).animate({
     opacity:1
   }, 500);
