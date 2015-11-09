@@ -3,7 +3,6 @@ module UsersHelper
     database_user = User.merge(username: spotify_user.id, email: spotify_user.email)
     database_user.image_url = spotify_user.images.first.url if spotify_user.images.first
     database_user.display_name = spotify_user.display_name if spotify_user.display_name
-    database_user.uri = spotify_user.uri
     database_user.save
     database_user
   end

@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    flash[:notice] = 'Signed out from Grape successully. Please note you are still signed in with Spotify.'
+    flash[:notice] = 'Signed out from Grape successully. Please note you are still signed in to Spotify.'
     redirect_to '/users/index'
   end
 end

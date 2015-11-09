@@ -101,7 +101,7 @@ a:hover {
   opacity: 0;
   float: right;
   padding: 50px;
-  padding-right: 10px;
+  padding-right: 0px;
   font-size: 180%;
 }
 
@@ -281,7 +281,7 @@ a:hover {
 
 #follow_button {
   margin-top: 12px;
-  margin-left: 5.5%;
+  margin-left: 7%;
 }
 
 .follow_artist {
