@@ -262,6 +262,12 @@ a:hover {
 
 .save_track_link:hover {
   background-color: #4fd477;
-  border-radius: 20px; 
-  color: #fff; 
+  border-radius: 20px;
+  color: #fff;
+}
+
+.follow_artist {
+  margin-left: 465px;
+  margin-bottom: 1px;
+  margin-top: 2px;
 }
