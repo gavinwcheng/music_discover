@@ -24,7 +24,7 @@ $(document).ready(function() {
   });
 
   $('.save_track_link').click(function() {
-    $(this).hide();
+        $(this).text("Saved");
   });
 
   $('.leaf_fill').delay(1800).animate({
