@@ -1,8 +1,8 @@
 <%= link_to image_tag("/images/cropped_grape_logo_shadowed.png", :width => 130, :height => 130), '/users/index', id:"welcome_logo", method: :get %>
 
 <div id="user_img">
-  <% if @current_spotify_user.images.first %>
-    <%= link_to image_tag(@current_spotify_user.images.first['url'], :width => 100, :height => 100, :class => "img_circle"), 'http://open.spotify.com/user/' + current_user.username, :target => "_blank" %>
+  <% if current_user.image_url %>
+    <%= link_to image_tag(current_user.image_url, :width => 100, :height => 100, :class => "img_circle"), 'http://open.spotify.com/user/' + current_user.username, :target => "_blank" %>
   <% end %>
 </div>
 

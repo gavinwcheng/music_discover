@@ -3,28 +3,22 @@ require 'rails_helper'
 feature 'creating a playlist' do
   before do
     OmniAuth.config.test_mode = true
-    OmniAuth.config.mock_auth[:spotify] = nil
-    OmniAuth.config.mock_auth[:spotify] = OmniAuth::AuthHash.new({
-      :provider => 'spotify',
-      :id => 'testing',
-      :email => 'testing@testing.com',
-      :playlist => {
-        :tracks => {
-          :artists => {
-            :name => 'test_artist'
-          }
-        }
-      }
-    })
+    mock_auth_hash
     Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:spotify]
+    # OmniAuth.config.mock_auth[:spotify] = nil
+    # OmniAuth.config.mock_auth[:spotify] = OmniAuth::AuthHash.new({
+    #   :provider => 'spotify',
+    #   :id => 'testing',
+    #   :email => 'testing@testing.com'
+    # })
   end
 
   context 'on index page' do
-    scenario 'displays a link to create playlist' do
-      user = User.create(username: 'testing')
+    scenario 'can sign in with spotify account' do
       visit '/'
+      expect(page).to have_link 'Sign in to Grape with Spotify'
       click_link 'Sign in to Grape with Spotify'
-      expect(page).to have_content "Welcome #{user.username}"
+      expect(page).to have_content "Welcome testing"
       expect(page).to have_link 'Generate playlist'
       expect(current_path).to eq '/artists/match'
     end

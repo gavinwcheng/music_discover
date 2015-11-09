@@ -1,6 +1,5 @@
 <%= render "welcome_bar" %>
 
-
 <% artists_array = artists_array_from_user(0) %>
 
 <% if artists_array %>
@@ -8,7 +7,8 @@
     <span class="playlist_header_column" id="title_header">Title</span><span class="playlist_header_column" id="artist_header">Artist</span>
   </div>
   <div class="panel-group playlist_area" id="accordion" role="tablist" aria-multiselectable="true">
-    <% for i in 0..1 %>
+    <% i = 0 %>
+    <% while (artists_array.length - i > 0) && (i < 2) %>
       <% track = random_track_from(artists_array, i) %>
       <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="heading<%= i %>">
@@ -27,6 +27,7 @@
           </div>
         </div>
       </div>
+      <% i += 1 %>
     <% end %>
   </div>
 <% end %>
