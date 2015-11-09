@@ -39,6 +39,10 @@ module ArtistsHelper
     artist_array[index].name
   end
 
+  def uri_of_artist_from(artist_array, index)
+    artist_array[index].uri
+  end
+
   def random_track_from(artist_array, index)
     artist_array[index].albums.first.tracks.shuffle.first
   end
