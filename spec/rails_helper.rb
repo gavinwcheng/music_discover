@@ -30,7 +30,7 @@ end
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
-  
+
   DatabaseCleaner[:neo4j, connection: {type: :server_db, path: 'http://localhost:7475'}].strategy = :transaction  #for transaction strategy
   #DatabaseCleaner[:neo4j, connection: {type: :server_db, path: 'http://localhost:7475'}].strategy = :deletion     #for deletion strategy
 
