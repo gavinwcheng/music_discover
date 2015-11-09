@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function($) {
   console.log('working');
 
   for(i=0; i<20; i++) {
@@ -22,6 +22,7 @@ $(document).ready(function() {
     }, 100);
     delay += 200;
   });
+
 
   $('.save_track_link').click(function() {
         $(this).text("Saved");
@@ -49,10 +50,6 @@ $(document).ready(function() {
   }, 500);
 
   $('#welcome_box').delay(500).animate({
-    opacity:1
-  }, 500);
-
-  $('#recom_user').delay(500).animate({
     opacity:1
   }, 500);
 
@@ -87,5 +84,6 @@ $(document).ready(function() {
           textTarget.css('opacity', scrollPercent);
       }
   });
+
 
 });
