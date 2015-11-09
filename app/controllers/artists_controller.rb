@@ -13,8 +13,8 @@ class ArtistsController < ApplicationController
   end
 
   def save_track
-    current_spotify_user = retrieve_spotify_user(current_user)
-    track = retrieve_spotify_track(params[:track_id])
+    current_spotify_user = RSpotify::User.find(current_user.username)
+    track = retrieve_spotify_track(params[:trackid])
     current_spotify_user.save_tracks!([track])
     redirect_to '/artists/playlist'
   end
