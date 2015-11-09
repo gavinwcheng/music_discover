@@ -7,7 +7,7 @@
     <span class="playlist_header_column" id="title_header">Title</span><span class="playlist_header_column" id="artist_header">Artist</span>
   </div>
   <div class="panel-group playlist_area" id="accordion" role="tablist" aria-multiselectable="true">
-    <% for i in 0..19 %>
+    <% for i in 0..1 %>
       <% track = random_track_from(artists_array, i) %>
       <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="heading<%= i %>">
@@ -21,7 +21,7 @@
           <div class="panel-body">
             <iframe src="https://embed.spotify.com/?uri=<%= track.uri %>" width="80px" height="80" frameborder="0" allowtransparency="true"></iframe>
             <% unless retrieve_spotify_user(current_user).saved_tracks?([track]).first %>
-              <%= link_to "Save Track", artists_save_path({trackid: track.id}).to_param, method: :post, remote: :true %>
+              <%= link_to "Save Track", artists_save_path({trackid: track.id}).to_param, class:"save_track_link", method: :post, remote: :true %>
             <% end %>
           </div>
         </div>

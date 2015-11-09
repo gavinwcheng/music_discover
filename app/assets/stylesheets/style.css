@@ -237,3 +237,20 @@ a:hover {
   opacity: 0;
   margin-top: 15px;
 }
+
+.save_track_link {
+  position: absolute;
+  background-color: #2ebd59;
+  color: #fff;
+  border-radius: 20px;
+  text-align: center;
+  padding: 3px 20px;
+  margin-left: 20px;
+  margin-top: 28px;
+}
+
+.save_track_link:hover {
+  background-color: #4fd477;
+  border-radius: 20px; 
+  color: #fff; 
+}
