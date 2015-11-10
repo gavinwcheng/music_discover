@@ -3,14 +3,9 @@ require 'rails_helper'
 feature 'creating a playlist' do
   before do
     OmniAuth.config.test_mode = true
+    # OmniAuth.config.mock_auth[:spotify] = nil
     Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:spotify]
     mock_omniauth_hash
-    # OmniAuth.config.mock_auth[:spotify] = nil
-    # OmniAuth.config.mock_auth[:spotify] = OmniAuth::AuthHash.new({
-    #   :provider => 'spotify',
-    #   :id => 'testing',
-    #   :email => 'testing@testing.com'
-    # })
   end
 
   context 'visiting homepage' do
