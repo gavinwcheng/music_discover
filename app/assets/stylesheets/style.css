@@ -293,3 +293,17 @@ a:hover {
   display: inline-block;
   margin-bottom: -4px;
 }
+
+#artist_page_link {
+  position: absolute;
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: 18px;
+  margin-top: 33px;
+}
+
+#artist_page_link:hover {
+  color: #808080;
+}
