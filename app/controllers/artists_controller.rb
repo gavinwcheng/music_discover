@@ -7,9 +7,20 @@ class ArtistsController < ApplicationController
   end
 
   def playlist
+    p '222'
+    p current_user
+    p current_user.artists.to_a
     @recommended_users = recommend_users(current_user)
+    p '333'
+    p @recommended_users
     overlapped_artists = identify_overlapped_artists(current_user)
+    p '444'
+    p overlapped_artists
     retrieve_info_from_spotify(@recommended_users, overlapped_artists)
+    p '555'
+    p @recommended_spotify_users
+    p '666'
+    p @recommended_spotify_artists
   end
 
   def save_track

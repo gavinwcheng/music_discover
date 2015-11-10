@@ -59,7 +59,7 @@ a:hover {
   border-radius: 20px;
 }
 
-#generate:hover {
+#generate_playlist:hover {
   background-color: #4fd477;
   border-radius: 20px;
 }
@@ -69,7 +69,7 @@ a:hover {
   text-decoration: none;
 }
 
-#generate {
+#generate_playlist {
   color: #ffffff;
   text-decoration: none;
 }
