@@ -23,7 +23,6 @@ $(document).ready(function() {
     delay += 200;
   });
 
-
   $('.save_track_link').click(function() {
         $(this).text("Saved");
         $(this).css({"background-color":"#8944ca"})
@@ -50,6 +49,10 @@ $(document).ready(function() {
   }, 500);
 
   $('#welcome_box').delay(500).animate({
+    opacity:1
+  }, 500);
+
+  $('#recom_user').delay(500).animate({
     opacity:1
   }, 500);
 
@@ -84,6 +87,5 @@ $(document).ready(function() {
           textTarget.css('opacity', scrollPercent);
       }
   });
-
 
 });
