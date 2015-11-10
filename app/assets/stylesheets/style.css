@@ -137,15 +137,8 @@ a:hover {
 }
 
 .glyphicon-chevron-left, .glyphicon-chevron-right {
-  /*background-color: black !important;*/
   color: #8944CA !important;
 }
-
-/*.glyphicon-chevron-left:visited, .glyphicon-chevron-right:visited {
-  background-color: black !important;
-  color: #8944CA !important;
-}*/
-
 
 #intro_text {
   position: absolute;
