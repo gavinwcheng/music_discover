@@ -1,18 +1,22 @@
 $(document).ready(function() {
   console.log('working');
 
-  for(i=0; i<20; i++) {
-    if(i % 2 == 0) {
-      $('#heading' + i).css({"background-color": "#f3e5f9"});
-      $('#collapse' + i).css({"background-color": "#f3e5f9"});
-    } else {
-      $('#heading' + i).css({"background-color": "#ebfaeb"});
-      $('#collapse' + i).css({"background-color": "#ebfaeb"});
+  for(x=0; x<10; x++) {
+    for(i=0; i<20; i++) {
+      if(i % 2 == 0) {
+        $('#heading' + x + i).css({"background-color": "#f3e5f9"});
+        $('#collapse' + x + i).css({"background-color": "#f3e5f9"});
+      } else {
+        $('#heading' + x + i).css({"background-color": "#ebfaeb"});
+        $('#collapse' + x + i).css({"background-color": "#ebfaeb"});
+      };
     };
   };
 
-  for(i = 0; i <= 19; i++){
-    $('#collapse' + i).collapse("hide");
+  for(x=0; x<10; x++) {
+    for(i = 0; i <= 19; i++){
+      $('#collapse' + x + i).collapse("hide");
+    };
   };
 
   var delay = 0;
@@ -24,8 +28,10 @@ $(document).ready(function() {
   });
 
   $('.save_track_link').click(function() {
-        $(this).text("Saved");
-        $(this).css({"background-color":"#8944ca"})
+    $(this).text("Saved");
+    $(this).css({"background-color":"#8944ca"});
+    $(this).css({"color":"#fff"});
+    $(this).css({"text-decoration": "none"});
   });
 
   $('.leaf_fill').delay(1800).animate({
@@ -52,7 +58,7 @@ $(document).ready(function() {
     opacity:1
   }, 500);
 
-  $('#recom_user').delay(500).animate({
+  $('.recom_user').delay(500).animate({
     opacity:1
   }, 500);
 
