@@ -279,6 +279,14 @@ a:hover {
   margin-top: 15px;
 }
 
+#saved_position {
+  position: absolute;
+  padding: 3px 20px;
+  margin-left: -30px;
+  margin-top: 28px;
+  font-size: 16px;
+}
+
 .save_track_link {
   position: absolute;
   background-color: #2ebd59;
@@ -323,4 +331,11 @@ a:hover {
 
 #artist_page_link:hover {
   color: #808080;
+}
+
+#glyphicon_pos {
+  top: -31px;
+  padding: 3px 20px;
+  margin-left: -5px;
+  margin-top: 28px;
 }

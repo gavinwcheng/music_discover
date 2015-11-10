@@ -30,7 +30,9 @@
                  <div class="panel-body">
                    <div class="preview_and_save_track_box">
                      <iframe src="https://embed.spotify.com/?uri=<%= track.uri %>" width="80px" height="80" frameborder="0" allowtransparency="true"></iframe>
-                     <% unless retrieve_spotify_user(current_user).saved_tracks?([track]).first %>
+                     <% if retrieve_spotify_user(current_user).saved_tracks?([track]).first %>
+                        <span class="glyphicon glyphicon-ok" id="glyphicon_pos"></span><span id="saved_position">Track already saved</span>
+                     <% else %>
                        <%= link_to "Save Track", artists_save_path({trackid: track.id}).to_param, class:"save_track_link", method: :post, remote: :true %>
                      <% end %>
                    </div>
