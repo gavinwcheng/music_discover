@@ -22,7 +22,7 @@
                <div class="panel-heading" role="tab" id="heading<%= x %><%= i %>">
                  <h4 class="panel-title">
                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= x %><%= i %>" aria-expanded="true" aria-controls="collapse<%= x %><%= i %>">
-                     <span class="playlist_item" id="playlist_title"><%= track.name %></span><span class="playlist_item" id="playlist_artist"><%= name_of_artist_from(artists_array, i) %></span><span class="playlist_item" id="playlist_genre"><%= artists_array[x].genres[0] %></span>
+                     <span class="playlist_item" id="playlist_title"><%= track.name %></span><span class="playlist_item" id="playlist_artist"><%= name_of_artist_from(artists_array, i) %></span><span class="playlist_item" id="playlist_genre"><%= artists_array[i].genres[0] %></span>
                    </a>
                  </h4>
                </div>
