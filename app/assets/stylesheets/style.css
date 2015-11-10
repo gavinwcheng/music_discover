@@ -251,6 +251,10 @@ a:hover {
   padding-left: 15px;
 }
 
+#genre_header {
+  padding-left: 170px;
+}
+
 .playlist_item {
   display: inline-block;
 }
@@ -260,8 +264,14 @@ a:hover {
 }
 
 #playlist_artist {
-  width: 55%;
+  width: 20%;
 }
+
+#playlist_genre {
+  width: 25%;
+}
+
+
 
 #about_text {
   position: absolute;
