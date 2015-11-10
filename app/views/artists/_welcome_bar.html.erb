@@ -13,5 +13,5 @@
   <% else %>
     <% name = current_user.display_name.split(" ").first %>
   <% end %>
-  <%= link_to name, 'http://open.spotify.com/user/' + current_user.username, id:"name_link", :target => "_blank" %>
+  <%= link_to name, "spotify:user:" + current_user.username, id:"name_link" %>
 </div>
