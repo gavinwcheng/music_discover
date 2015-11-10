@@ -284,8 +284,14 @@ a:hover {
   margin-left: 6.2%;
 }
 
-.follow_artist {
-  margin-left: 432px;
-  margin-bottom: 1px;
-  margin-top: 2px;
+.preview_and_save_track_box {
+  display: inline-block;
+  width: 44.3%;
 }
+
+.follow_artist {
+  display: inline-block;
+  margin-bottom: -4px;
+}
+
+
