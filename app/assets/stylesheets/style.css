@@ -35,6 +35,22 @@ a:hover {
   text-decoration: none;
 }
 
+.sign_out_match {
+  background-color: #2EBD59;
+  width: 100px;
+  height: 30px;
+  line-height: 28px;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 20px;
+  margin: 5px -0px 0px 0px;
+}
+
+#match_sign_out {
+  float: right;
+  color: #fff;
+}
+
 #table {
   max-width: 100%;
 }
@@ -100,8 +116,7 @@ a:hover {
 #welcome_box {
   opacity: 0;
   float: right;
-  padding: 50px;
-  padding-right: 0px;
+  padding-top: 45px;
   font-size: 180%;
 }
 
