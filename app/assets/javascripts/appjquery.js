@@ -1,4 +1,4 @@
-$(document).ready(function($) {
+$(document).ready(function() {
   console.log('working');
 
   for(i=0; i<20; i++) {
