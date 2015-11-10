@@ -24,8 +24,10 @@ $(document).ready(function() {
   });
 
   $('.save_track_link').click(function() {
-        $(this).text("Saved");
-        $(this).css({"background-color":"#8944ca"})
+    $(this).text("Saved");
+    $(this).css({"background-color":"#8944ca"});
+    $(this).css({"color":"#fff"});
+    $(this).css({"text-decoration": "none"});
   });
 
   $('.leaf_fill').delay(1800).animate({
