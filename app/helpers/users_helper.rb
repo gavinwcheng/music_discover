@@ -1,8 +1,8 @@
 module UsersHelper
   def save_users(spotify_user)
-    database_user = User.merge(username: spotify_user.id, email: spotify_user.email)
-    database_user.image_url = spotify_user.images.first.url if spotify_user.images.first
+    database_user = User.merge(email: spotify_user.email, username: spotify_user.id)
     database_user.display_name = spotify_user.display_name if spotify_user.display_name
+    database_user.image_url = spotify_user.images.first['url'] if spotify_user.images.first
     database_user.save
     database_user
   end

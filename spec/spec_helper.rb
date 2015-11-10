@@ -17,6 +17,7 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require './spec/support/omniauth_mock'
+
 RSpec.configure do |config|
   config.include(OmniauthMock)
 
