@@ -1,39 +1,60 @@
 <%= render "welcome_bar" %>
 
-<div>
-  <% artists_array = artists_array_from_user(0) %>
+<% artists_array = artists_array_from_user(0) %>
 
-  <% if artists_array %>
-    <div class="playlist_header">
-      <span class="playlist_header_column" id="title_header">Title</span><span class="playlist_header_column" id="artist_header">Artist</span>
-    </div>
-    <div class="panel-group playlist_area" id="accordion" role="tablist" aria-multiselectable="true">
-      <% i = 0 %>
-      <% while (artists_array.length - i > 0) && (i < 2) %>
-        <% track = random_track_from(artists_array, i) %>
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="heading<%= i %>">
-            <h4 class="panel-title">
-              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= i %>" aria-expanded="true" aria-controls="collapse<%= i %>">
-                <span class="playlist_item" id="playlist_title"><%= track.name %></span><span class="playlist_item" id="playlist_artist"><%= name_of_artist_from(artists_array, i) %></span>
-              </a>
-            </h4>
-          </div>
-          <div id="collapse<%= i %>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading<%= i %>">
-            <div class="panel-body">
-              <iframe src="https://embed.spotify.com/?uri=<%= track.uri %>" width="80px" height="80" frameborder="0" allowtransparency="true"></iframe>
-              <% unless retrieve_spotify_user(current_user).saved_tracks?([track]).first %>
-                  <%= link_to "Save Track", artists_save_path({trackid: track.id}).to_param, class:"save_track_link", method: :post, remote: :true %>
-                  <iframe class="follow_artist" src="https://embed.spotify.com/follow/1/?uri=<%= uri_of_artist_from(artists_array, i) %>" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+<div id ="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <% i = 0 %>
+    <% while (artists_array.length - i > 0) && (i < 2) %>
+    <li data-target="#carousel-example-generic" data-slide-to=<% i %></li>
+    <% i += 1 %>
+    <% end %>
+  </ol>
+
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+
+          <% if artists_array %>
+            <div class="playlist_header">
+              <span class="playlist_header_column" id="title_header">Title</span><span class="playlist_header_column" id="artist_header">Artist</span>
+            </div>
+            <div class="panel-group playlist_area" id="accordion" role="tablist" aria-multiselectable="true">
+              <% i = 0 %>
+              <% while (artists_array.length - i > 0) && (i < 2) %>
+                <% track = random_track_from(artists_array, i) %>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading<%= i %>">
+                    <h4 class="panel-title">
+                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= i %>" aria-expanded="true" aria-controls="collapse<%= i %>">
+                        <span class="playlist_item" id="playlist_title"><%= track.name %></span><span class="playlist_item" id="playlist_artist"><%= name_of_artist_from(artists_array, i) %></span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapse<%= i %>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading<%= i %>">
+                    <div class="panel-body">
+                      <iframe src="https://embed.spotify.com/?uri=<%= track.uri %>" width="80px" height="80" frameborder="0" allowtransparency="true"></iframe>
+                      <% unless retrieve_spotify_user(current_user).saved_tracks?([track]).first %>
+                          <%= link_to "Save Track", artists_save_path({trackid: track.id}).to_param, class:"save_track_link", method: :post, remote: :true %>
+                          <iframe class="follow_artist" src="https://embed.spotify.com/follow/1/?uri=<%= uri_of_artist_from(artists_array, i) %>" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+                      <% end %>
+                  </div>
+                </div>
+                <% i += 1 %>
               <% end %>
-          </div>
+            </div>
+          <% end %>
         </div>
-        <% i += 1 %>
-      <% end %>
+      </div>
     </div>
-  <% end %>
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
 
-</div>
 
   <div class="central" id="recom_user">
     <div id="recom_user_box">
@@ -53,3 +74,4 @@
       <iframe src="https://embed.spotify.com/follow/1/?uri=spotify:user:<%=user_id%>&size=basic&theme=light" width="200" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
     </div>
   </div>
+</div>
