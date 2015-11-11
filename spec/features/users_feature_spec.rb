@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'user management' do
+feature 'user signing and out' do
   before do
     OmniAuth.config.test_mode = true
     # OmniAuth.config.mock_auth[:spotify] = nil
@@ -8,7 +8,7 @@ feature 'user management' do
     mock_omniauth_hash
   end
 
-  context 'visiting homepage' do
+  context 'on homepage' do
     scenario 'can be redirected to /users/index page' do
       visit '/'
       expect(page).to have_link 'Sign in to Grape with Spotify'

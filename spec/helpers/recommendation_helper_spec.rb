@@ -55,12 +55,13 @@ RSpec.describe RecommendationHelper, type: :helper do
     save_association(user_2, artist_1)
     save_association(user_2, artist_1)
     save_association(user_2, artist_1)
+    save_association(user_2, artist_1)
+    save_association(user_3, artist_1)
     save_association(user_3, artist_1)
     save_association(user_3, artist_1)
     save_association(user_4, artist_1)
+    save_association(user_4, artist_1)
     save_association(user_5, artist_1)
-    expect(recommend_users(user_1)).to eq([[user_2, 1, 3], [user_3, 1, 2], [user_4, 1, 1]])
+    expect(recommend_users(user_1)).to eq([[user_2, 1, 4], [user_3, 1, 3], [user_4, 1, 2]])
   end
-
-  
 end
