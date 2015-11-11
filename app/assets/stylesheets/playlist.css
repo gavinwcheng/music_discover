@@ -1,5 +1,9 @@
 /*playlist*/
 
+img {
+  border-radius: 50%;
+}
+
 #table {
   max-width: 100%;
 }
@@ -146,4 +150,3 @@
 .carousel-control {
   background-color: #FFFFFF;
 }
-

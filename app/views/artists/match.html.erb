@@ -1,8 +1,10 @@
 <%= render "welcome_bar" %>
 
-<div class="central button_box" id="generate_playlist_box">
-  <div id="intro_text">
-    Click below to
+<div id=background_banner>
+  <div class="central button_box" id="generate_playlist_box">
+    <div id="intro_text">
+      Click below to
+    </div>
+    <%= link_to 'generate a playlist', '/artists/playlist', class:"link", id:"generate_playlist", method: :get %>
   </div>
-  <%= link_to 'generate a playlist', '/artists/playlist', class:"link", id:"generate_playlist", method: :get %>
 </div>
