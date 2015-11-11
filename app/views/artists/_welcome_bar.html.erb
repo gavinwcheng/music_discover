@@ -7,11 +7,14 @@
 </div>
 
 <div id="welcome_box">
-  Welcome,
-  <% if current_user.display_name == nil %>
-    <% name = current_user.username %>
-  <% else %>
-    <% name = current_user.display_name.split(" ").first %>
-  <% end %>
-  <%= link_to name, "spotify:user:" + current_user.username, id:"name_link" %>
+  <div style="display:block">
+    Welcome,
+    <% if current_user.display_name == nil %>
+      <% name = current_user.username %>
+    <% else %>
+      <% name = current_user.display_name.split(" ").first %>
+    <% end %>
+    <%= link_to name, "spotify:user:" + current_user.username, id:"name_link" %>
+  </div>
+  <%= link_to 'Sign out', '/users/signout', class:"sign_out_match link", id:"match_sign_out", method: :delete %>
 </div>

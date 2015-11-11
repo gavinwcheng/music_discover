@@ -35,6 +35,23 @@ a:hover {
   text-decoration: none;
 }
 
+.sign_out_match {
+  /*background-color: #2EBD59;*/
+  background-color: #4fd477;
+  width: 87px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 4px;
+}
+
+#match_sign_out {
+  float: right;
+  color: #fff;
+}
+
 #table {
   max-width: 100%;
 }
@@ -102,7 +119,7 @@ a:hover {
 #welcome_box {
   opacity: 0;
   float: right;
-  padding: 52px;
+  padding: 40px;
   padding-right: 4px;
   font-size: 180%;
   z-index: 1;
@@ -276,8 +293,6 @@ a:hover {
 #playlist_genre {
   width: 25%;
 }
-
-
 
 #about_text {
   position: absolute;
