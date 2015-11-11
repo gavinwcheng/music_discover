@@ -21,6 +21,11 @@ module UsersHelper
   end
 
   def save_association(user, artist)
-    user.artists << artist unless user.artists.include?(artist)
+    if user.artists.include?(artist)
+      listens_to = user.artists.first_rel_to(artist)
+    else
+      listens_to = ListensTo.create(from_node: user, to_node: artist)
+    end
+    listens_to.increment_artist_presence
   end
 end
