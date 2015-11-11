@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'creating a playlist' do
+feature 'user management' do
   before do
     OmniAuth.config.test_mode = true
     # OmniAuth.config.mock_auth[:spotify] = nil
@@ -19,7 +19,7 @@ feature 'creating a playlist' do
       expect(page).to have_link 'Sign in to Grape with Spotify'
       click_link 'Sign in to Grape with Spotify'
       expect(page).to have_content 'Welcome, test_display_name'
-      expect(page).to have_selector :css, "img[src*='test_url']"
+      expect(page).to have_selector :css, "img[src*='test_user_url']"
       expect(page).to have_link 'welcome_logo'
       expect(page).to have_link 'generate_playlist'
       expect(current_path).to eq '/artists/match'
@@ -42,9 +42,10 @@ feature 'creating a playlist' do
       click_link 'welcome_logo'
       click_link 'Sign out'
       expect(page).not_to have_content 'Welcome, test_display_name'
-      expect(page).not_to have_selector :css, "img[src*='test_url']"
+      expect(page).not_to have_selector :css, "img[src*='test_user_url']"
       expect(page).to have_link 'Sign in to Grape with Spotify'
       expect(page).to have_content 'Signed out from Grape successully. Please note you are still signed in to Spotify.'
+      expect(current_path).to eq '/users/index'
     end
   end
 end

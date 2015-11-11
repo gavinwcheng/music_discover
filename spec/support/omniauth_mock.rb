@@ -5,7 +5,7 @@ module OmniauthMock
       'email' => 'testing@testing.com',
       'id' => 'test_username',
       'display_name' => 'test_display_name',
-      'images' => [{'url' => 'test_url'}]
+      'images' => [{'url' => 'test_user_url'}]
     }
   end
 

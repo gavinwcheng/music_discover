@@ -25,7 +25,7 @@ module ArtistsHelper
 
   def retrieve_recommended_artists_from_spotify(user, artists, overlapped_artists)
     artists.each do |artist|
-      unless overlapped_artists.include?(artist[0].name) || @recommended_spotify_artists[user[0].username].length >= 2
+      unless overlapped_artists.include?(artist[0].name) || @recommended_spotify_artists[user[0].username].length >= 8
         @recommended_spotify_artists[user[0].username] << retrieve_spotify_artist(artist[0]).first if artist[0].name != ""
       end
     end
