@@ -2,15 +2,15 @@
 <% x = 0 %>
 <div id ="carousel-example-generic" class="carousel slide" data-interval="false">
   <div class="carousel-inner" role="listbox">
-    <% for x in 0..1 %>
+    <% for x in 0..2 %>
       <% artists_array = artists_array_from_user(x) %>
-      <% if x == 0 %>
-        <div class="item active">
-      <% else %>
-        <div class="item">
-      <% end %>
-        <div>
-          <% if artists_array %>
+      <% if artists_array %>
+        <% if x == 0 %>
+          <div class="item active">
+        <% else %>
+          <div class="item">
+        <% end %>
+          <div>
             <div class="playlist_header">
               <span class="playlist_header_column" id="title_header">Title</span><span class="playlist_header_column" id="artist_header">Artist</span><span class="playlist_header_column" id="genre_header">Genre</span>
             </div>
@@ -63,9 +63,9 @@
                 <iframe src="https://embed.spotify.com/follow/1/?uri=spotify:user:<%=user_id%>&size=basic&theme=light" width="200" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
               </div>
             </div>
-          <% end %>
+          </div>
         </div>
-      </div>
+      <% end %>
       <% x += 1 %>
     <% end %>
   </div>
