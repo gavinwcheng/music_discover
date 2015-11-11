@@ -2,11 +2,11 @@ body {
   font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important;
 }
 
-a:hover {
-  background-color: transparent;
+a {
   text-decoration: none !important;
 }
 
-a {
+a:hover {
+  background-color: transparent;
   text-decoration: none !important;
 }
