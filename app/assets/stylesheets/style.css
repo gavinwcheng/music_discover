@@ -102,8 +102,8 @@ a:hover {
 #welcome_box {
   opacity: 0;
   float: right;
-  padding: 20px;
-  padding-right: 0px;
+  padding: 52px;
+  padding-right: 4px;
   font-size: 180%;
   z-index: 1;
   position: relative;
