@@ -18,6 +18,7 @@
   width: 100%;
   height: 34px;
   padding: 0px 213px 25px 213px;
+  margin-bottom: -10px;
 }
 
 .playlist_header_column {
@@ -30,7 +31,7 @@
 }
 
 #artist_header {
-  width: 20%;
+  width: 33%;
   padding-left: 2px;
 }
 
@@ -43,11 +44,11 @@
 }
 
 #playlist_artist {
-  width: 20.8%;
+  width: 34.3%;
 }
 
 #playlist_genre {
-  width: 25%;
+  width: 21%;
 }
 
 #saved_position {
