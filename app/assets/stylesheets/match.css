@@ -1,0 +1,29 @@
+/*text on match page*/
+
+#intro_text {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  margin-right: -50%;
+  top: -80%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 190%;
+  width: 100%;
+}
+
+/*generate playlist box */
+
+#generate_playlist_box {
+  opacity: 0;
+}
+
+#generate_playlist {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#generate_playlist:hover {
+  background-color: #4fd477;
+  border-radius: 20px;
+}
