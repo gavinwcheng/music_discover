@@ -4,6 +4,8 @@
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
+  /*width: 40%;
+  margin: 0 auto;*/
   text-align: center;
 }
 
@@ -94,4 +96,3 @@
 .img_circle {
   border-radius: 50%;
 }
-

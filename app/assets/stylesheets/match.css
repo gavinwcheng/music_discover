@@ -27,3 +27,18 @@
   background-color: #4fd477;
   border-radius: 20px;
 }
+
+#site_info_box {
+  opacity: 0;
+  position: absolute;
+}
+
+#site_info {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#site_info:hover {
+  background-color: #4fd477;
+  border-radius: 20px;
+}
