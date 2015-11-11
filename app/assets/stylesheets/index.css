@@ -1,0 +1,108 @@
+/*logo*/
+
+#index_logo {
+  width: 60%;
+  height: 60%;
+}
+
+/*sign in */
+
+#sign_in_box {
+  opacity: 0;
+  margin-left: 18.5%;
+  margin-top: 5%;
+}
+
+#sign_in {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.button_divide {
+  height: 10px;
+  width: 340px;
+}
+
+/*sign out*/
+
+#sign_out_index {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sign_out_notice {
+  opacity: 0;
+  margin-top: 15px;
+}
+
+/*parallax feature*/
+
+#about_text {
+  position: absolute;
+  opacity: 0;
+  font-size: 120%;
+  margin-top: 85px;
+}
+
+/*logo animation*/
+
+.leaf_fill {
+  position: absolute;
+  background-color: #8944CA;
+  opacity: 1;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-left: 161px;
+  margin-top: 37px;
+}
+
+.grape_fill {
+  position: absolute;
+  background-color: #8944CA;  /*purple  */
+  opacity: 1;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+#grape_0 {
+  margin-left: 298px;
+  margin-top: 210px;
+}
+
+#grape_1 {
+  margin-left: 243px;
+  margin-top: 194px;
+}
+
+#grape_2 {
+  margin-left: 294px;
+  margin-top: 157px;
+}
+
+#grape_3 {
+  margin-left: 197px;
+  margin-top: 173px;
+}
+
+#grape_4 {
+  margin-left: 243px;
+  margin-top: 137px;
+}
+
+#grape_5 {
+  margin-left: 291px;
+  margin-top: 105px;
+}
+
+#grape_6 {
+  margin-left: 190px;
+  margin-top: 122px;
+}
+
+#grape_7 {
+  margin-left: 241px;
+  margin-top: 84px;
+}
+
