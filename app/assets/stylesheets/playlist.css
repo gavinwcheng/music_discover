@@ -30,7 +30,7 @@
 }
 
 #artist_header {
-  width: 20%;
+  width: 29.9%;
   padding-left: 2px;
 }
 
@@ -43,7 +43,7 @@
 }
 
 #playlist_artist {
-  width: 20.8%;
+  width: 30.9%;
 }
 
 #playlist_genre {
@@ -93,6 +93,7 @@
   text-decoration: none;
   font-size: 16px;
   margin-top: 33px;
+  margin-left: -32px;
 }
 
 #artist_page_link:hover {
