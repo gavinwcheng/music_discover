@@ -23,7 +23,7 @@ feature 'creating a playlist' do
       user_2.artists << artist_2
 
       recommended_user = double :spotify_user, id: 'test_username_2'
-      recommended_artist = double :spotify_artist, name: 'test_artist_2', uri: 'test_artist_2_uri'
+      recommended_artist = double :spotify_artist, name: 'test_artist_2', uri: 'test_artist_2_uri', genres: ['test_genre']
       recommended_track = double :spotify_track, id: 001, name: 'test_track', uri: 'test_track_uri'
 
       allow(RSpotify::User).to receive(:find).and_return(recommended_user)
