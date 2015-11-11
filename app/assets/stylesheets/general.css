@@ -1,0 +1,94 @@
+.central {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/*buttons and links*/
+
+.button_box {
+  width: 320px;
+  height: 42px;
+  background-color: #2EBD59;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 41px;
+  font-size: 20px;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+}
+
+.link:hover {
+  background-color: #4fd477;
+  border-radius: 20px;
+}
+
+/*welcome bar*/
+
+.sign_out_welcome {
+  /*background-color: #2EBD59;*/
+  background-color: #4fd477;
+  width: 87px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 4px;
+}
+
+#welcome_sign_out {
+  float: right;
+  color: #fff;
+}
+
+#welcome_logo {
+  opacity: 0;
+  width: 10%;
+  height: 10%;
+  float: left;
+  padding: 20px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+#welcome_logo:hover {
+  background-color: #fff;
+}
+
+#welcome_box {
+  opacity: 0;
+  float: right;
+  padding: 40px;
+  padding-right: 4px;
+  font-size: 180%;
+}
+
+#user_img {
+  opacity: 0;
+  float: right;
+  padding: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+#name_link {
+  color: black;
+  text-decoration: none;
+}
+
+#name_link:hover {
+  color: #808080;
+  background-color: #ffffff;
+}
+
+.img_circle {
+  border-radius: 50%;
+}
+
