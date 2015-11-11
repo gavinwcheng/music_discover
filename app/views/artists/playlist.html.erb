@@ -12,7 +12,7 @@
       <div>
        <% if artists_array %>
          <div class="playlist_header">
-           <span class="playlist_header_column" id="title_header">Title</span><span class="playlist_header_column" id="artist_header">Artist</span>
+           <span class="playlist_header_column" id="title_header">Title</span><span class="playlist_header_column" id="artist_header">Artist</span><span class="playlist_header_column" id="genre_header">Genre</span>
          </div>
          <div class="panel-group playlist_area" id="accordion" role="tablist" aria-multiselectable="true">
            <% i = 0 %>
@@ -22,7 +22,7 @@
                <div class="panel-heading" role="tab" id="heading<%= x %><%= i %>">
                  <h4 class="panel-title">
                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= x %><%= i %>" aria-expanded="true" aria-controls="collapse<%= x %><%= i %>">
-                     <span class="playlist_item" id="playlist_title"><%= track.name %></span><span class="playlist_item" id="playlist_artist"><%= name_of_artist_from(artists_array, i) %></span>
+                     <span class="playlist_item" id="playlist_title"><%= track.name %></span><span class="playlist_item" id="playlist_artist"><%= name_of_artist_from(artists_array, i) %></span><span class="playlist_item" id="playlist_genre"><%= artists_array[i].genres[0] %></span>
                    </a>
                  </h4>
                </div>
@@ -30,7 +30,9 @@
                  <div class="panel-body">
                    <div class="preview_and_save_track_box">
                      <iframe src="https://embed.spotify.com/?uri=<%= track.uri %>" width="80px" height="80" frameborder="0" allowtransparency="true"></iframe>
-                     <% unless retrieve_spotify_user(current_user).saved_tracks?([track]).first %>
+                     <% if retrieve_spotify_user(current_user).saved_tracks?([track]).first %>
+                        <span class="glyphicon glyphicon-ok" id="glyphicon_pos"></span><span id="saved_position">Track already saved</span>
+                     <% else %>
                        <%= link_to "Save Track", artists_save_path({trackid: track.id}).to_param, class:"save_track_link", method: :post, remote: :true %>
                      <% end %>
                    </div>

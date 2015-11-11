@@ -75,7 +75,7 @@ a:hover {
   border-radius: 20px;
 }
 
-#generate:hover {
+#generate_playlist:hover {
   background-color: #4fd477;
   border-radius: 20px;
 }
@@ -85,7 +85,7 @@ a:hover {
   text-decoration: none;
 }
 
-#generate {
+#generate_playlist {
   color: #ffffff;
   text-decoration: none;
 }
@@ -100,6 +100,7 @@ a:hover {
   height: 60%;
 }
 
+
 #welcome_logo {
   opacity: 0;
   width: 10%;
@@ -107,6 +108,7 @@ a:hover {
   float: left;
   padding: 20px;
   border-radius: 50%;
+  z-index: 1;
 }
 
 #welcome_logo:hover {
@@ -116,14 +118,19 @@ a:hover {
 #welcome_box {
   opacity: 0;
   float: right;
-  padding-top: 45px;
+  padding: 52px;
+  padding-right: 4px;
   font-size: 180%;
+  z-index: 1;
+  position: relative;
 }
 
 #user_img {
   opacity: 0;
   float: right;
   padding: 20px;
+  z-index: 1;
+  position: relative;
 }
 
 #recom_user_box {
@@ -266,6 +273,10 @@ a:hover {
   padding-left: 15px;
 }
 
+#genre_header {
+  padding-left: 170px;
+}
+
 .playlist_item {
   display: inline-block;
 }
@@ -275,7 +286,11 @@ a:hover {
 }
 
 #playlist_artist {
-  width: 55%;
+  width: 20%;
+}
+
+#playlist_genre {
+  width: 25%;
 }
 
 #about_text {
@@ -292,6 +307,14 @@ a:hover {
 .sign_out_notice {
   opacity: 0;
   margin-top: 15px;
+}
+
+#saved_position {
+  position: absolute;
+  padding: 3px 20px;
+  margin-left: -30px;
+  margin-top: 28px;
+  font-size: 16px;
 }
 
 .save_track_link {
@@ -338,4 +361,11 @@ a:hover {
 
 #artist_page_link:hover {
   color: #808080;
+}
+
+#glyphicon_pos {
+  top: -31px;
+  padding: 3px 20px;
+  margin-left: -5px;
+  margin-top: 28px;
 }
