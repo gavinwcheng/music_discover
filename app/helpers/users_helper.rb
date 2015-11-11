@@ -33,8 +33,6 @@ module UsersHelper
     else
       rel = ListensTo.create(from_node: user, to_node: artist)
     end
-    p rel
     rel.increment_artist_presence
-    p rel.artist_presence
   end
 end
