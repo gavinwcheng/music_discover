@@ -122,8 +122,10 @@ a:hover {
   padding: 40px;
   padding-right: 4px;
   font-size: 180%;
-  z-index: 1;
-  position: relative;
+}
+
+#carousel-example-generic{
+  height: 2px;
 }
 
 #user_img {
