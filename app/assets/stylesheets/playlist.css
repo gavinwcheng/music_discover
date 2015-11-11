@@ -7,7 +7,6 @@
 .playlist_area {
   opacity: 0;
   width: 70%;
-  /*padding: 0px 213px;*/
   margin-left: 15%;
 }
 
@@ -19,7 +18,6 @@
   opacity: 0;
   width: 100%;
   height: 34px;
-  /*padding: 0px 213px 25px 213px;*/
   margin-bottom: -10px;
   margin-left: 15%;
 }
