@@ -10,4 +10,9 @@ class ListensTo
     self.artist_presence += 1
     self.save
   end
+
+  def reset_artist_presence
+    self.artist_presence = 0
+    self.save
+  end
 end

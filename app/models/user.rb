@@ -5,6 +5,6 @@ class User
   property :username, type: String
   property :display_name, type: String
   property :image_url, type: String
-  
-  has_many :out, :artists, type: :LISTENS_TO
+
+  has_many :out, :artists, rel_class: ListensTo
 end

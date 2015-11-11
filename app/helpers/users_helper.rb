@@ -8,6 +8,7 @@ module UsersHelper
   end
 
   def save_artists(spotify_user, database_user)
+    reset_all_artist_presence(database_user)
     spotify_user.playlists.each do |playlist|
       playlist.tracks.each do |track|
         track.artists.each do |artist|
@@ -20,12 +21,20 @@ module UsersHelper
     end
   end
 
+  def reset_all_artist_presence user
+    user.artists.each_rel do |rel|
+      rel.reset_artist_presence
+    end
+  end
+
   def save_association(user, artist)
     if user.artists.include?(artist)
-      listens_to = user.artists.first_rel_to(artist)
+      rel = user.artists.first_rel_to(artist)
     else
-      listens_to = ListensTo.create(from_node: user, to_node: artist)
+      rel = ListensTo.create(from_node: user, to_node: artist)
     end
-    listens_to.increment_artist_presence
+    p rel
+    rel.increment_artist_presence
+    p rel.artist_presence
   end
 end

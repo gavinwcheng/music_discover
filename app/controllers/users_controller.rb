@@ -1,5 +1,3 @@
-require './app/models/listens_to'
-
 class UsersController < ApplicationController
   include UsersHelper
   include RspotifyHelper
