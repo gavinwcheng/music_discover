@@ -9,8 +9,8 @@ module RecommendationHelper
 
   def recommend_artists(user)
     user[0].artists(:a).
-      order('a.popularity DESC').
+      order('rel1.artist_presence DESC').
       limit(10).
-      pluck('a', 'count(*)')
+      pluck('a', 'count(*)', 'rel1')
   end
 end
