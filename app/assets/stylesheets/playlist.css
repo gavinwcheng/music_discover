@@ -6,7 +6,8 @@
 
 .playlist_area {
   opacity: 0;
-  padding: 0px 213px;
+  width: 70%;
+  margin-left: 15%;
 }
 
 .panel {
@@ -15,10 +16,10 @@
 
 .playlist_header {
   opacity: 0;
-  width: 100%;
+  width: 70%;
   height: 34px;
-  padding: 0px 213px 25px 213px;
   margin-bottom: -10px;
+  margin-left: 15%;
 }
 
 .playlist_header_column {
