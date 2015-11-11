@@ -36,14 +36,15 @@ a:hover {
 }
 
 .sign_out_match {
-  background-color: #2EBD59;
-  width: 100px;
-  height: 30px;
+  /*background-color: #2EBD59;*/
+  background-color: #4fd477;
+  width: 87px;
+  height: 28px;
   line-height: 28px;
-  font-size: 15px;
+  font-size: 14px;
   text-align: center;
   border-radius: 20px;
-  margin: 5px -0px 0px 0px;
+  margin-top: 4px;
 }
 
 #match_sign_out {
@@ -118,7 +119,7 @@ a:hover {
 #welcome_box {
   opacity: 0;
   float: right;
-  padding: 52px;
+  padding: 40px;
   padding-right: 4px;
   font-size: 180%;
   z-index: 1;
