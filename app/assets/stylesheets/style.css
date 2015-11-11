@@ -84,6 +84,7 @@ a:hover {
   height: 60%;
 }
 
+
 #welcome_logo {
   opacity: 0;
   width: 10%;
@@ -91,6 +92,7 @@ a:hover {
   float: left;
   padding: 20px;
   border-radius: 50%;
+  z-index: 1;
 }
 
 #welcome_logo:hover {
@@ -100,15 +102,19 @@ a:hover {
 #welcome_box {
   opacity: 0;
   float: right;
-  padding: 50px;
+  padding: 20px;
   padding-right: 0px;
   font-size: 180%;
+  z-index: 1;
+  position: relative;
 }
 
 #user_img {
   opacity: 0;
   float: right;
   padding: 20px;
+  z-index: 1;
+  position: relative;
 }
 
 #recom_user_box {
