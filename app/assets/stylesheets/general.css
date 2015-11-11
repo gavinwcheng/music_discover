@@ -55,11 +55,9 @@
   float: left;
   padding: 20px;
   border-radius: 50%;
-  z-index: 1;
 }
 
 #welcome_logo:hover {
-  z-index: 1;
   background-color: #fff;
 }
 
@@ -75,7 +73,6 @@
   opacity: 0;
   float: right;
   padding: 20px;
-  /*z-index: 1;*/
   position: relative;
 }
 
