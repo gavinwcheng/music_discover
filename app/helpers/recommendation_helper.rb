@@ -6,7 +6,7 @@ module RecommendationHelper
     user.as(:u1).artists.users(:u2).
       where('u2 <> u1').
       order('sum(rel1.artist_presence) + sum(rel2.artist_presence) DESC').
-      limit(2).
+      limit(3).
       pluck('u2', 'sum(rel1.artist_presence)', 'sum(rel2.artist_presence)')
   end
 
@@ -16,7 +16,7 @@ module RecommendationHelper
   def recommend_artists(user)
     user[0].artists(:a).
       order('rel1.artist_presence DESC').
-      limit(10).
+      limit(20).
       pluck('a', 'count(*)', 'rel1')
   end
 end
