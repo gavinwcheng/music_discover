@@ -1,3 +1,6 @@
+html {
+  height: 100%;
+}
 body {
   font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f3f3f3+66 */
@@ -9,6 +12,7 @@ body {
   background: -ms-radial-gradient(center, ellipse cover, #ffffff 0%, #ffffff 65%, #f2f2f2 94%, #f2f2f2 100%);
   background: radial-gradient(ellipse at center, #ffffff 0%, #ffffff 65%, #f2f2f2 94%, #f2f2f2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2', GradientType=1 );
+  height: 100%;
 }
 
 a {
