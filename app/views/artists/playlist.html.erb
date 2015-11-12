@@ -1,9 +1,10 @@
 <%= render "welcome_bar" %>
+
 <% x = 0 %>
 <div id ="carousel-example-generic" class="carousel slide" data-interval="false">
   <div class="carousel-inner" role="listbox">
     <% for x in 0..2 %>
-      <% artists_array = artists_array_from_user(x) %>
+      <% artists_array = artists_from_recommended_user(x) %>
       <% if artists_array %>
         <% if x == 0 %>
           <div class="item active">
@@ -17,12 +18,12 @@
             <div class="panel-group playlist_area" id="accordion" role="tablist" aria-multiselectable="true">
               <% i = 0 %>
               <% while (artists_array.length - i > 0) && (i < 8) %>
-                <% track = random_track_from(artists_array, i) %>
+                <% track = find_random_track(artists_array, i) %>
                 <div class="panel panel-default">
                   <div class="panel-heading" role="tab" id="heading<%= x %><%= i %>">
                     <h4 class="panel-title">
                       <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= x %><%= i %>" aria-expanded="true" aria-controls="collapse<%= x %><%= i %>">
-                        <span class="playlist_item" id="playlist_title"><%= track.name %></span><span class="playlist_item" id="playlist_artist"><%= name_of_artist_from(artists_array, i) %></span><span class="playlist_item" id="playlist_genre"><%= artists_array[i].genres[0] %></span>
+                        <span class="playlist_item" id="playlist_title"><%= track.name %></span><span class="playlist_item" id="playlist_artist"><%= artists_array[i].name %></span><span class="playlist_item" id="playlist_genre"><%= artists_array[i].genres[0] %></span>
                       </a>
                     </h4>
                   </div>
@@ -33,11 +34,11 @@
                         <% if retrieve_spotify_user(current_user).saved_tracks?([track]).first %>
                           <span class="glyphicon glyphicon-ok" id="glyphicon_pos"></span><span id="saved_position">Track already saved</span>
                         <% else %>
-                          <%= link_to "Save Track", artists_save_path({trackid: track.id}).to_param, class:"save_track_link", method: :post, remote: :true %>
+                          <%= link_to "Save Track", artists_save_path({track_id: track.id}).to_param, class:"save_track_link", method: :post, remote: :true %>
                         <% end %>
                       </div>
-                      <iframe class="follow_artist" src="https://embed.spotify.com/follow/1/?uri=<%= uri_of_artist_from(artists_array, i) %>" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
-                      <%= link_to "More from this artist", "spotify:artist:" + uri_of_artist_from(artists_array, i), :id => "artist_page_link" %>
+                      <iframe class="follow_artist" src="https://embed.spotify.com/follow/1/?uri=<%= artists_array[i].uri %>" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+                      <%= link_to "More from this artist", "spotify:artist:" + artists_array[i].uri, :id => "artist_page_link" %>
                     </div>
                   </div>
                 </div>
@@ -45,24 +46,24 @@
               <% end %>
             </div>
 
-            <div class="recom_user">
-              <div id="recom_user_box">
-                This playlist was generated using
-                <% if @recommended_users[x][0].display_name == nil %>
-                  <% name = @recommended_users[x][0].username %>
-                <% else %>
-                  <% name = @recommended_users[x][0].display_name.split(" ").first %>
-                <% end %>
-                <%= link_to name, "spotify:user:" + @recommended_users[x][0].username, :id => "name_link" %>'s Spotify
-              </div>
-              <% if @recommended_users[x][0].image_url != nil %>
-                <%= link_to image_tag(@recommended_users[x][0].image_url, :width => 100, :height => 100, :class => "img_circle", :id => "recom_user_img"), "spotify:user:" + @recommended_users[x][0].username %>
-              <% end %>
-              <div id="follow_button">
-                <% user_id = @recommended_users[x][0].username %>
-                <iframe src="https://embed.spotify.com/follow/1/?uri=spotify:user:<%=user_id%>&size=basic&theme=light" width="200" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
-              </div>
-            </div>
+           <div class="recom_user">
+             <div id="recom_user_box">
+               This playlist was generated using
+               <% if @recommended_spotify_users[x].display_name == nil %>
+                 <% name = @recommended_spotify_users[x].id %>
+               <% else %>
+                 <% name = @recommended_spotify_users[x].display_name.split(" ").first %>
+               <% end %>
+               <%= link_to name, "spotify:user:" + @recommended_spotify_users[x].id, :id => "name_link" %>'s Spotify
+             </div>
+             <% if @recommended_spotify_users[x].images.first != nil %>
+               <%= link_to image_tag(@recommended_spotify_users[x].images.first['url'], :width => 100, :height => 100, :class => "img_circle", :id => "recom_user_img"), "spotify:user:" + @recommended_spotify_users[x].id %>
+             <% end %>
+             <div id="follow_button">
+               <% user_id = @recommended_spotify_users[x].id %>
+               <iframe src="https://embed.spotify.com/follow/1/?uri=spotify:user:<%=user_id%>&size=basic&theme=light" width="200" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+             </div>
+           </div>
           </div>
         </div>
       <% end %>

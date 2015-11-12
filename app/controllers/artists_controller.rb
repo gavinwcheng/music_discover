@@ -7,15 +7,14 @@ class ArtistsController < ApplicationController
   end
 
   def playlist
-    @recommended_users = recommend_users(current_user)
-    overlapped_artists = identify_overlapped_artists(current_user)
-    retrieve_info_from_spotify(@recommended_users, overlapped_artists)
+    recommended_users = recommend_users(current_user)
+    retrieve_spotify_users_and_artists(current_user, recommended_users)
   end
 
   def save_track
     current_spotify_user = retrieve_spotify_user(current_user)
-    track = retrieve_spotify_track(params[:trackid])
-    current_spotify_user.save_tracks!([track])
+    spotify_track = retrieve_spotify_track(params[:track_id])
+    current_spotify_user.save_tracks!([spotify_track])
     redirect_to '/artists/playlist'
   end
 end
