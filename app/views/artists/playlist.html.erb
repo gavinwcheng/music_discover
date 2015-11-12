@@ -33,7 +33,7 @@
                         <% if retrieve_spotify_user(current_user).saved_tracks?([track]).first %>
                           <span class="glyphicon glyphicon-ok" id="glyphicon_pos"></span><span id="saved_position">Track already saved</span>
                         <% else %>
-                          <%= link_to "Save Track", artists_save_path({trackid: track.id}).to_param, class:"save_track_link", method: :post, remote: :true %>
+                          <%= link_to "Save Track", artists_save_path({track_id: track.id}).to_param, class:"save_track_link", method: :post, remote: :true %>
                         <% end %>
                       </div>
                       <iframe class="follow_artist" src="https://embed.spotify.com/follow/1/?uri=<%= uri_of_artist_from(artists_array, i) %>" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
