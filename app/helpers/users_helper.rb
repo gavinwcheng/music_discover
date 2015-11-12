@@ -23,11 +23,11 @@ module UsersHelper
 
   def save_association(user, artist)
     if user.artists.include?(artist)
-      rel = user.artists.first_rel_to(artist)
+      listens_to = user.artists.first_rel_to(artist)
     else
-      rel = ListensTo.create(from_node: user, to_node: artist)
+      listens_to = ListensTo.create(from_node: user, to_node: artist)
     end
-    rel.increment_artist_presence
+    listens_to.increment_artist_presence
   end
 
   private

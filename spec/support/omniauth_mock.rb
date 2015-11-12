@@ -8,8 +8,4 @@ module OmniauthMock
       'images' => [{'url' => 'test_user_url'}]
     }
   end
-
-  def mock_omniauth_invalid_credentials
-    OmniAuth.config.mock_auth[:spotify] = :invalid_credentials
-  end
 end

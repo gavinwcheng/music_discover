@@ -15,12 +15,12 @@ module RecommendationHelper
   # who appear in recommended user's but not current user's playlists,
   # ranked by number of appearance in the recommended user's account
   # capped at 10 recommended artists
-  def recommend_artists(user)
+  def recommend_artists(current_user, recommended_user)
     recommended_artists = Array.new
-    artists = retrieve_favourite_artists(user[0])
+    artists = retrieve_favourite_artists(recommended_user)
     artists.each do |artist|
-      unless user[0].artists.to_a.include?(artist) || recommended_artists.length >= 10
-        recommended_artists << artist
+      unless current_user.artists.to_a.include?(artist[0]) || recommended_artists.length >= 10
+        recommended_artists << artist[0]
       end
     end
     recommended_artists

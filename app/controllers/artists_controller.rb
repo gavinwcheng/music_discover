@@ -8,7 +8,7 @@ class ArtistsController < ApplicationController
 
   def playlist
     recommended_users = recommend_users(current_user)
-    retrieve_spotify_users_and_artists(recommended_users)
+    retrieve_spotify_users_and_artists(current_user, recommended_users)
   end
 
   def save_track
