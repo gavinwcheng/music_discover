@@ -78,20 +78,20 @@ $(document).ready(function() {
   var logoTargetHeight = 200
 
   $(document).scroll(function(e){
-      var scrollPercent = (logoTargetHeight - window.scrollY) / logoTargetHeight;
-      if(scrollPercent >= 0){
-          logoTarget.css('opacity', scrollPercent);
-      }
+    var scrollPercent = (logoTargetHeight - window.scrollY) / logoTargetHeight;
+    if(scrollPercent >= 0){
+      logoTarget.css('opacity', scrollPercent);
+    }
   });
 
   var textTarget = $('#about_text');
   var textTargetHeight = 300
 
   $(document).scroll(function(e){
-      var scrollPercent = 1 - ((textTargetHeight - window.scrollY) / textTargetHeight);
-      if(scrollPercent >= 0){
-          textTarget.css('opacity', scrollPercent);
-      }
+    var scrollPercent = 1 - ((textTargetHeight - window.scrollY) / textTargetHeight);
+    if(scrollPercent >= 0){
+      textTarget.css('opacity', scrollPercent);
+    }
   });
 
 });

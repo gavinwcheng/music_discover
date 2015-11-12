@@ -1,42 +1,42 @@
-<body style="height:980px">
-<% if current_user %>
+<body style="height:1000px">
+  <% if current_user %>
 
-  <div id="user_img">
-    <% if current_user.image_url %>
-      <%= link_to image_tag(current_user.image_url, :width => 100, :height => 100, :class => "img_circle"), 'spotify:user:' + current_user.username %>
-    <% end %>
-  </div>
-
-  <div id="welcome_box">
-    Welcome,
-    <% if current_user.display_name == nil %>
-      <% name = current_user.username %>
-    <% else %>
-      <% name = current_user.display_name.split(" ").first %>
-    <% end %>
-    <%= link_to name, 'spotify:user:' + current_user.username, id:"name_link" %>
-  </div>
-<% end %>
-
-<div class="central">
-  <div id="logo_box">
-    <%= render "grape_animation" %>
-    <img src="/images/cropped_grape_logo_shadowed.png" id="index_logo">
-    <div class="button_box" id="sign_in_box">
-      <% if current_user %>
-        <%= link_to 'Generate a playlist', '/artists/playlist', class:"link", id:"generate_playlist", method: :get %>
-        <div class="button_divide"></div>
-        <%= link_to 'Sign out', '/users/signout', class:"button_box link", id:"sign_out_index", method: :delete %>
-      <% else %>
-        <%= link_to 'Sign in to Grape with Spotify', '/auth/spotify', class:"link", id:"sign_in"%>
+    <div id="user_img">
+      <% if current_user.image_url %>
+        <%= link_to image_tag(current_user.image_url, :width => 100, :height => 100, :class => "img_circle"), 'spotify:user:' + current_user.username %>
       <% end %>
     </div>
-    <% if notice %>
-      <div class="sign_out_notice"><%= notice %></div>
-    <% end %>
+
+    <div id="welcome_box">
+      Welcome,
+      <% if current_user.display_name == nil %>
+        <% name = current_user.username %>
+      <% else %>
+        <% name = current_user.display_name.split(" ").first %>
+      <% end %>
+      <%= link_to name, 'spotify:user:' + current_user.username, id:"name_link" %>
+    </div>
+  <% end %>
+
+  <div class="central">
+    <div id="logo_box">
+      <%= render "grape_animation" %>
+      <img src="/images/cropped_grape_logo_shadowed.png" id="index_logo">
+      <div class="button_box" id="sign_in_box">
+        <% if current_user %>
+          <%= link_to 'Generate a playlist', '/artists/playlist', class:"link", id:"generate_playlist", method: :get %>
+          <div class="button_divide"></div>
+          <%= link_to 'Sign out', '/users/signout', class:"button_box link", id:"sign_out_index", method: :delete %>
+        <% else %>
+          <%= link_to 'Sign in to Grape with Spotify', '/auth/spotify', class:"link", id:"sign_in"%>
+        <% end %>
+      </div>
+      <% if notice %>
+        <div class="sign_out_notice"><%= notice %></div>
+      <% end %>
+    </div>
+    <div id="about_text">
+      Grape matches you with people from all over the world who share your music taste. We will find you a user with similar music in their Spotify library, and generate a playlist especially tailored for you based on their favourite music that you don't have.
+    </div>
   </div>
-  <div id="about_text">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </div>
-</div>
 </body>

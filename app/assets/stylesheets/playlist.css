@@ -1,5 +1,9 @@
 /*playlist*/
 
+img {
+  border-radius: 50%;
+}
+
 #table {
   max-width: 100%;
 }
@@ -131,8 +135,8 @@
 
 /*carousel */
 
-#carousel-example-generic{
-  height: 2px;
+.carousel-control {
+  bottom: 50%;
 }
 
 .carousel-control.left, .carousel-control.right {
@@ -145,11 +149,4 @@
 
 .carousel-control {
   background-color: #FFFFFF;
-}
-
-#glyphicon_pos {
-  top: -31px;
-  padding: 3px 20px;
-  margin-left: -5px;
-  margin-top: 28px;
 }

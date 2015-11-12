@@ -1,5 +1,4 @@
 /*logo*/
-
 #index_logo {
   width: 60%;
   height: 60%;
@@ -40,8 +39,12 @@
 #about_text {
   position: absolute;
   opacity: 0;
-  font-size: 120%;
-  margin-top: 85px;
+  font-size: 150%;
+  width: 80%;
+  margin-left: 2.5em;
+  margin-top: 4em;
+  line-height: 1.625em;
+
 }
 
 /*logo animation*/
@@ -105,4 +108,3 @@
   margin-left: 241px;
   margin-top: 84px;
 }
-

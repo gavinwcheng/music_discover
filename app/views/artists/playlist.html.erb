@@ -2,48 +2,48 @@
 <% x = 0 %>
 <div id ="carousel-example-generic" class="carousel slide" data-interval="false">
   <div class="carousel-inner" role="listbox">
-    <% for x in 0..1 %>
-    <% artists_array = artists_array_from_user(x) %>
-    <% if x == 0 %>
-      <div class="item active">
-    <% else %>
-      <div class="item">
-    <% end %>
-      <div>
-       <% if artists_array %>
-         <div class="playlist_header">
-           <span class="playlist_header_column" id="title_header">Title</span><span class="playlist_header_column" id="artist_header">Artist</span><span class="playlist_header_column" id="genre_header">Genre</span>
-         </div>
-         <div class="panel-group playlist_area" id="accordion" role="tablist" aria-multiselectable="true">
-           <% i = 0 %>
-           <% while (artists_array.length - i > 0) && (i < 2) %>
-             <% track = random_track_from(artists_array, i) %>
-             <div class="panel panel-default">
-               <div class="panel-heading" role="tab" id="heading<%= x %><%= i %>">
-                 <h4 class="panel-title">
-                   <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= x %><%= i %>" aria-expanded="true" aria-controls="collapse<%= x %><%= i %>">
-                     <span class="playlist_item" id="playlist_title"><%= track.name %></span><span class="playlist_item" id="playlist_artist"><%= name_of_artist_from(artists_array, i) %></span><span class="playlist_item" id="playlist_genre"><%= artists_array[i].genres[0] %></span>
-                   </a>
-                 </h4>
-               </div>
-               <div id="collapse<%= x %><%= i %>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading<%= x %><%= i %>">
-                 <div class="panel-body">
-                   <div class="preview_and_save_track_box">
-                     <iframe src="https://embed.spotify.com/?uri=<%= track.uri %>" width="80px" height="80" frameborder="0" allowtransparency="true"></iframe>
-                     <% if retrieve_spotify_user(current_user).saved_tracks?([track]).first %>
-                        <span class="glyphicon glyphicon-ok" id="glyphicon_pos"></span><span id="saved_position">Track already saved</span>
-                     <% else %>
-                       <%= link_to "Save Track", artists_save_path({trackid: track.id}).to_param, class:"save_track_link", method: :post, remote: :true %>
-                     <% end %>
-                   </div>
-                   <iframe class="follow_artist" src="https://embed.spotify.com/follow/1/?uri=<%= uri_of_artist_from(artists_array, i) %>" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
-                   <%= link_to "More from this artist", "spotify:artist:" + uri_of_artist_from(artists_array, i), :id => "artist_page_link" %>
-                 </div>
-               </div>
-             <% i += 1 %>
-           <% end %>
-         </div>
-     </div>
+    <% for x in 0..2 %>
+      <% artists_array = artists_array_from_user(x) %>
+      <% if artists_array %>
+        <% if x == 0 %>
+          <div class="item active">
+        <% else %>
+          <div class="item">
+        <% end %>
+          <div>
+            <div class="playlist_header">
+              <span class="playlist_header_column" id="title_header">Title</span><span class="playlist_header_column" id="artist_header">Artist</span><span class="playlist_header_column" id="genre_header">Genre</span>
+            </div>
+            <div class="panel-group playlist_area" id="accordion" role="tablist" aria-multiselectable="true">
+              <% i = 0 %>
+              <% while (artists_array.length - i > 0) && (i < 8) %>
+                <% track = random_track_from(artists_array, i) %>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading<%= x %><%= i %>">
+                    <h4 class="panel-title">
+                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= x %><%= i %>" aria-expanded="true" aria-controls="collapse<%= x %><%= i %>">
+                        <span class="playlist_item" id="playlist_title"><%= track.name %></span><span class="playlist_item" id="playlist_artist"><%= name_of_artist_from(artists_array, i) %></span><span class="playlist_item" id="playlist_genre"><%= artists_array[i].genres[0] %></span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapse<%= x %><%= i %>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading<%= x %><%= i %>">
+                    <div class="panel-body">
+                      <div class="preview_and_save_track_box">
+                        <iframe src="https://embed.spotify.com/?uri=<%= track.uri %>" width="80px" height="80" frameborder="0" allowtransparency="true"></iframe>
+                        <% if retrieve_spotify_user(current_user).saved_tracks?([track]).first %>
+                          <span class="glyphicon glyphicon-ok" id="glyphicon_pos"></span><span id="saved_position">Track already saved</span>
+                        <% else %>
+                          <%= link_to "Save Track", artists_save_path({trackid: track.id}).to_param, class:"save_track_link", method: :post, remote: :true %>
+                        <% end %>
+                      </div>
+                      <iframe class="follow_artist" src="https://embed.spotify.com/follow/1/?uri=<%= uri_of_artist_from(artists_array, i) %>" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+                      <%= link_to "More from this artist", "spotify:artist:" + uri_of_artist_from(artists_array, i), :id => "artist_page_link" %>
+                    </div>
+                  </div>
+                </div>
+                <% i += 1 %>
+              <% end %>
+            </div>
 
      <div class="recom_user">
        <div id="recom_user_box">
@@ -69,15 +69,16 @@
     </div>
     <% x += 1 %>
     <% end %>
+  </div>
 
 
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-  <span class="sr-only">Previous</span>
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
   </a>
   <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-  <span class="sr-only">Next</span>
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
   </a>
 
 </div>
