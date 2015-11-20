@@ -41,6 +41,7 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner', github: 'DatabaseCleaner/database_cleaner'
   gem 'factory_girl_rails'
+  gem 'coveralls', require: false
 end
 
 group :development do
