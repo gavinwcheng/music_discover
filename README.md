@@ -75,24 +75,24 @@ When the installation is complete, visit localhost:7474 to check if the database
 
 STEP 1: With the server running, navigate to localhost:3000 and click on ‘Sign in to Grape with Spotify’
 
-(public/grape_1.png)
+![shot_1](public/grape_1.png)
 
 STEP 2: This takes you to the Spotify login page, enabling you to connect your Spotify account with 
 Grape, either by logging in with your username and password, or through your Facebook account 
 (provided your Facebook is connected to your Spotify).
 
-(public/grape_2.png)
+![shot_2](public/grape_2.png)
 
 STEP 3: You have now logged in and connected your Spotify account to Grape. This uploads your public 
 playlists from your Spotify library into the Neo4j database, connecting you with users already in the 
 database with similar music tastes.
 
-(public/grape_4.png)
+![shot_3](public/grape_4.png)
 
  This example shows 4 users signed into Grape and in the database. Each user bubble is connected 
 to all of the different artists that they listen to, and two users may be connected by similar artists.
 
-(public/neo4j_1.png)
+![shot_4](public/neo4j_1.png)
 
 STEP 4: Clicking ‘generate a playlist’ will navigate you to he playlist page, which will first display 
 the user who matches your music taste the most. Clicking on a track name will give you the option to play the 
@@ -100,7 +100,7 @@ track, save it to your Spotify library, follow the artist or discover more from 
 Clicking the arrow on the right-hand-side will take you to the recommended playlist from the next user matched with you. 
 Clicking the logo will take you back to the homepage and the photo icons and usernames will open Spotify, taking you to the relevant profile pages.
 
-(public/grape_5.png)
+![shot_5](public/grape_5.png)
 
 ---
 
