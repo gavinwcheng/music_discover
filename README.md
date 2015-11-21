@@ -4,7 +4,7 @@
 
 ###Summary
 
-This project was built in a 7-day sprint during our last week at Makers Academy.
+This project was built and completed in a 9-day sprint during our last week at Makers Academy.
 
 We found a problem with music recommendation services, where users would have music recommended to them through
 computer based algorithms and computer generated decisions. We wanted to bring the social element back to music recommendation sites,
@@ -17,24 +17,29 @@ the social side back to music recommendations, and many users have already disco
 ## Program Logic
 
 We have built the MVC using Ruby on Rails and used Neo4j as our database. Our recommendation logic is two-fold:
-1) Recommend users who are ranked by their number of shared artists with current user and the number of appearance
-of each shared artist in both recommended user's and current user's playlists
-2) Recommend artists (from each recommended user) who are not already in current user's playlists, who are ranked
-by the number of appearance in the recommended user's account
+
+1) Recommend users who are ranked by their number of shared artists with  the current user and the number of appearances
+of each shared artist in both the recommended user's and current user's playlists
+
+2) Recommend artists (from each recommended user) who are not already in the current user's playlists, who are ranked
+by the number of appearances in the recommended user's account
+
 The recommendation and RSpotify API methods are modularized in respective helper files. Feature and unit tests can
-be run by writing ‘rspec’ command.
+be run by running ‘rspec’ in your terminal.
 
 ## Getting Started
 
 To clone the repo to your local machine run the following command from your command line
+
 `git clone https://github.com/gavinwcheng/music_discover.git`
+
 To install the gems and dependencies, run `gem install bundler` to install the bundle gem followed by `bundle` to install
 the gems in the Gemfile.
 
 Since this project works with the Spotify API, you need to create a Spotify Developer account, which will facilitate the Spotify API.
 Fortunately this is very simple to do. First visit https://developer.spotify.com/ and create a new app, giving it a name and description of your choice.
-This will take you to a new page where your Client ID and Client Secret are displayed. It’s import these are stored securely on your local machine so we
-recommend storing them in your Environment Variables. 
+This will take you to a new page where your Client ID and Client Secret are displayed. It’s important that these are stored securely on your local machine so we
+recommend storing them in your environment variables. 
 To do this run `open ~/.bash_profile` in the command line and add the following lines to your bash profile:
 
  `export SPOTIFY_SECRET=<YOUR_CLIENT_SECRET>`
@@ -94,7 +99,7 @@ to all of the different artists that they listen to, and two users may be connec
 
 ![shot_4](public/images/neo4j_1.png)
 
-STEP 4: Clicking ‘generate a playlist’ will navigate you to he playlist page, which will first display 
+STEP 4: Clicking ‘generate a playlist’ will navigate you to the playlist page, which will first display 
 the user who matches your music taste the most. Clicking on a track name will give you the option to play the 
 track, save it to your Spotify library, follow the artist or discover more from that artist (which opens the Spotify application). 
 Clicking the arrow on the right-hand-side will take you to the recommended playlist from the next user matched with you. 
